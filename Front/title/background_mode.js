@@ -1,14 +1,3 @@
-const date = new Date();
-const hour = date.getHours();//24시간 시간 값만 얻음
-if (0 <= hour && hour <= 1){
-    localStorage.setItem("darkmode", "on");
-}else{
-    localStorage.setItem("darkmode", "off");
-}
-console.log(hour)
-
-document.addEventListener('DOMContentLoaded', function () {
-
 
     if (document.querySelector('.darkmode')) {
         if (localStorage.getItem("darkmode") == 'on') {
@@ -31,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem("darkmode");
     }
 
-})
+
 
