@@ -50,3 +50,9 @@ body.dark{
 .fa-moon{
     color: #f1c40f;
 }
+input:checked + label {
+    background-color: #fff;
+}
+input:checked + .label .ball {
+    background: #111;
+}
