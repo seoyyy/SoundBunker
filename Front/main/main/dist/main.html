@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - iPad Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet"><link rel="stylesheet" href="./main_style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body onload="checkTime();">
+  <!-- <div class="ipadBox">
+    <button class="powerButton" onclick="powerMe();">I</button> -->
+    <div class="ipadScreen">
+      <div class="wallpaper">
+        <div class="statusBar"></div>
+        <div class="dockWrapper">
+          <div class="dockbar">
+            <div class="iconDiv" onclick="window.barColor='white';iconClick(event);">
+              <div class="imgDiv"></div>
+            </div>
+            <div class="iconDiv" onclick="window.barColor='white';iconClick(event);">
+              <div class="imgDiv"></div>
+            </div>
+            <div class="iconDiv" onclick="window.barColor='black';iconClick(event);">
+              <div class="imgDiv"></div>
+            </div>
+            <div class="iconDivide"></div>
+            <div class="iconDiv" onclick="window.barColor='black';iconFClick(event);">
+              <div class="imgDiv"></div>
+            </div>
+            <div class="iconDiv" onclick="window.barColor='white';iconFClick(event);">
+              <div class="imgDiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lockScreen" onclick="lockClick();">
+        <div class="lockContent">
+          <div class="statusBar"></div>
+          <div class="lockIcon"></div>
+          <div class="lockTime">9:41<br />Saturday, August 17</div>
+        </div>
+        <div class="interactionBar"></div>
+      </div>
+      <!-- 어플 실행시 나오는 홈바 -->
+      <div class="interactionBar" id="inAppBar" onclick="goHome();"></div>
+    </div>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./main_script.js"></script>
+
+</body>
+</html>
