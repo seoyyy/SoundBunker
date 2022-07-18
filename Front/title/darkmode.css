@@ -1,3 +1,6 @@
+/* 전체 박스 사이즈*/
+/* 내용 영역의 폭(width)와 높이(height)는 패딩(Padding)과 보더(Border)를 
+포함한 범위가 됩니다. */
 *{
     box-sizing: border-box;
 }
@@ -7,22 +10,29 @@ body{
     align-items: center;
     margin: 0;
 }
+/* body 라이트모드일때 바탕색 */
 body.light{
     background-color: #cbc9e0;
 }
+/* body 다크모드일때 바탕색 */
 body.dark{
     background-image: radial-gradient(circle, #171424, black);
 }
+
 .checkbox{
-    opacity: 0;
+    /* 체크박스 불투명도 */
+    opacity: 3;
     position: absolute;
 }
+/* 햇님달님 크기 */
 .checkbox i{
     font-size: 1.5em;
 }
+/* 볼 움직이는 너비 */
 .checkbox:checked + .label .ball{
     transform: translate(24px);
 }
+/* 버튼 뒤 테두리 설정 */
 .label {
     background-color: #111;
     display: flex;
@@ -34,6 +44,7 @@ body.dark{
     width: 50px;
     height: 26px;
 }
+/* 볼 설정 */
 .ball{
     background-color: #fff;
     border-radius: 50%;
@@ -44,15 +55,19 @@ body.dark{
     height: 22px;
     transition: transform 0.2s linear;
 }
+/* 라이트모드 햇님 색깔 */
 .fa-sun{
     color: #f39c12;
 }
+/* 라이트모드 달님 색깔 */
 .fa-moon{
     color: #f1c40f;
 }
+/* 다크모드일때 버튼 바탕 색 */
 input:checked + label {
     background-color: #fff;
 }
+/* 다크모드일때 버튼 색 */
 input:checked + .label .ball {
     background: #111;
 }
