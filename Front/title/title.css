@@ -22,7 +22,7 @@ svg {
     fill: none;
     stroke: white;
     stroke-dasharray: 7% 28%;
-    stroke-width: 3px;
+    stroke-width: 4.5px;
     animation: stroke-offset 2s;
 }
 
