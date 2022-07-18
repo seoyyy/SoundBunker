@@ -7,10 +7,10 @@ html{
 }
 div{
     position: absolute;
-    top: 37%;
-    left: 30%;
+    top: 25%;
+    left: 15%;
     font-family: 'BRBA_B';
-    font-size: 105px;
+    font-size: 180px;
     font-style: italic;
     color: whitesmoke;
     
@@ -62,7 +62,7 @@ ul li {
     animation-timing-function: linear;
 }
 #bar5 {
-    animation: groove_2 1s infinite;
+    animation: groove_3 1s infinite;
     animation-timing-function: linear;
 }
 #bar6 {
@@ -102,11 +102,11 @@ ul li {
     animation-timing-function: linear;
 }
 #bar15 {
-    animation: groove_2 0.8s infinite;
+    animation: groove_2 1s infinite;
     animation-timing-function: linear;
 }
 #bar16 {
-    animation: groove_1 2s infinite;
+    animation: groove_1 0.8s infinite;
     animation-timing-function: linear;
 }
 #bar17 {
@@ -121,25 +121,25 @@ ul li {
 
 @keyframes groove_1 {
     0% {
-        height: 12px;
+        height: 20px;
     }
 
     50% {
-        height: 6px;
+        height: 12px;
     }
 
     100% {
-        height: 12px;
+        height: 20px;
     }
 }
 
 @keyframes groove_2 {
     0% {
-        height: 18px;
+        height: 28px;
     }
 
     50% {
-        height: 6px;
+        height: 15px;
     }
 
     100% {

@@ -13,11 +13,30 @@ function openFullScreenMode() {
     $('.fullscreen').hide();
 }
 
+let a = 0;
+
+$(document).keydown(function(event) {
+    if ( event.keyCode == 32 || event.which == 32 ) {
+        console.log(a)
+        
+        if(a == 0){
+            $("li[id^='bar']").css("animation-play-state", "paused"); 
+            a = 1 
+        }
+        else if (a == 1){
+            $("li[id^='bar']").css("animation-play-state", "running");
+            a = 0 
+        }
+
+    }
+});
+
+
+
+
 
 $(document).keydown(function(event) {
     if ( event.keyCode == 27 || event.which == 27 ) {
         $('.fullscreen').show();
     }
 });
-
-
