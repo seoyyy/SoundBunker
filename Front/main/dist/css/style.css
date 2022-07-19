@@ -38,7 +38,8 @@ div#back {
 .popup {
   width: 100%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
+  background-image: radial-gradient(circle, #171424, black);
   visibility: hidden;
   overflow: hidden;
 }
