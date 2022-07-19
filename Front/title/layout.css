@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#sidebar {
+    background: #99ff99;
+    float: right;
+    width: 20%;
+    height: 937px;
+}
+
+#maincontent {
+    background: #9999ff;
+    height: 843px;
+    width: 80%;
+}
+
+#footer {
+    position: absolute;
+    top: 90%;
+    background: #ffcc99;
+    height: 10%;
+    width: 80%;
+}

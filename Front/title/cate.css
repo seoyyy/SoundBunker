@@ -5,32 +5,32 @@ html{
     -o-background-size: cover;
     background-size: cover;
 }
-div{
+/* SoundBunker */
+div.name{
     position: absolute;
-    top: 25%;
-    left: 15%;
+    top: 30%;
+    left: 16%;
     font-family: 'BRBA_B';
     font-size: 180px;
     font-style: italic;
     color: whitesmoke;
-    
 }
-ul {
+/* 주파수 */
+ul.musicwave {
     position: absolute;
     width: 180px;
     height: 44px;
     top: 10%;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 85px;
     margin: auto;
     list-style-type: none;
     padding: 0;
     transform: rotateX(180deg);
     
 }
-
-
+/*  */
 ul li {
     position: relative;
     float: left;
