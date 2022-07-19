@@ -1,8 +1,3 @@
-
-
-
-
-//
 var doc = document.documentElement;
 // 전체화면 설정
 function openFullScreenMode() {

@@ -22,7 +22,7 @@ svg {
     fill: none;
     stroke: white;
     stroke-dasharray: 7% 28%;
-    stroke-width: 4.5px;
+    stroke-width: 3.5px;
     animation: stroke-offset 2s;
 }
 
@@ -52,8 +52,8 @@ svg {
 }
 
 @keyframes stroke-offset {
-    50% {
-        stroke-dashoffset: 35%;
+    65% {
+        stroke-dashoffset: 20%;
         stroke-dasharray: 0 52.5%;
     }
 }

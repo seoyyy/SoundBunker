@@ -5,9 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
     <title>Sign in & Sign up Form</title>
-    <link rel="stylesheet" href="/SoundBunker/Front/title/login.css">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,58 +22,46 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="#" class="sign-in-form">
-                    <h2 class="title">Sign in</h2>
+                    <!-- 로그인 -->
+                    <h2 class="title">로그인</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <!-- 아이디 -->
+                        <input type="text" placeholder="아이디" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <!-- 패스워드 -->
+                        <input type="password" placeholder="패스워드" />
                     </div>
-                    <input type="submit" value="Login" class="btn solid" />
-                    <p class="social-text">Or Sign in with social platforms</p>
+                    <!-- 로그인버튼 -->
+                    <input type="submit" value="로그인" class="btn solid" />
+
                     <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
+                        <p class="social-text">카카오톡으로 계속하시겠습니까?</p>
                         <a href="#" class="social-icon">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </form>
                 <form action="#" class="sign-up-form">
-                    <h2 class="title">Sign up</h2>
+                    <!-- 회원가입 -->
+                    <h2 class="title">회원가입</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="아이디" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="이메일" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="패스워드" />
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
-                    <p class="social-text">Or Sign up with social platforms</p>
+                    <input type="submit" class="btn" value="회원가입" onclick>
                     <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
+                        <p class="social-text">카카오톡으로 계속하시겠습니까?</p>
                         <a href="#" class="social-icon">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
@@ -78,24 +73,24 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here ?</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Debitis, ex ratione. Aliquid!
+                    <h3>아이디가 없으십니까?</h3>
+                    <p style="color: yellow; font-weight: bold;">
+                        아래 버튼을 눌러주세요!
                     </p>
-                    <button class="btn transparent" id="sign-up-btn"> Sign up
+                    <!-- 회원가입 버튼 -->
+                    <button class="btn transparent" id="sign-up-btn"> 회원가입
                     </button>
                 </div>
                 <img src="img/log.svg" class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>One of us ?</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nostrum laboriosam ad deleniti.
+                    <h3>아이디가 있으십니까 ?</h3>
+                    <p style="color: yellow; font-weight: bold;">
+                        아래 버튼을 눌러주세요!
                     </p>
-                    <button class="btn transparent" id="sign-in-btn"> Sign in
+                    <!-- 로그인 버튼 -->
+                    <button class="btn transparent" id="sign-in-btn"> 로그인
                     </button>
                 </div>
                 <img src="img/register.svg" class="image" alt="" />
@@ -103,5 +98,6 @@
         </div>
     </div>
 </body>
-    <script src="/SoundBunker/Front/title/login.js"></script>
+<script src="login.js"></script>
+
 </html>

@@ -1,14 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 600;
 }
 
-body,
-input {
-    font-family: "Poppins", sans-serif;
-}
 
 .container {
     position: relative;
@@ -94,6 +91,7 @@ form.sign-in-form {
     font-weight: 600;
     font-size: 1.1rem;
     color: #333;
+    /* font-family: 'MICEGothic'; */
 }
 
 .input-field input::placeholder {
@@ -203,12 +201,14 @@ form.sign-in-form {
     color: #fff;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
+    transform: translate(-200px, 80px);
+
 }
 
 .panel h3 {
     font-weight: 600;
     line-height: 1;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .panel p {
@@ -223,7 +223,7 @@ form.sign-in-form {
     width: 130px;
     height: 41px;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 19px;
 }
 
 .right-panel .image,
@@ -258,7 +258,7 @@ form.sign-in-form {
 
 .container.sign-up-mode .right-panel .image,
 .container.sign-up-mode .right-panel .content {
-    transform: translateX(0%);
+    transform: translate(-55px, 55px);
 }
 
 .container.sign-up-mode .left-panel {
