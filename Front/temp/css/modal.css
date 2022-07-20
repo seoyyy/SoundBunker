@@ -1,0 +1,1125 @@
+.modalBg {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.modalBg.on {
+    z-index: 98;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.sub_modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.sub_modal.on {
+    opacity: 1;
+    z-index: 99;
+}
+
+.mainBox2_modal {
+    background: url(../../imgs/main/modal_bg2.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox3_modal {
+    background: url(../../imgs/main/modal_bg3.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox4_modal {
+    background: url(../../imgs/main/modal_bg4.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox5_modal {
+    background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox6_modal {
+    background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.modal_box .slideList {
+    position: relative;
+}
+
+.sub_modal > .inner {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.sub_modal > .inner .slideWrap {
+    height: 100%;
+    min-height: 880px;
+    position: relative;
+}
+
+.sub_modal > .inner .slideWrap .slideList {
+    height: 100vh;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox {
+    width: 70em;
+    margin: 120px auto 0 auto;
+    position: relative;
+    background: url(../../imgs/main/slide_bg.png) right 0 bottom 0 no-repeat;
+    background-size: contain;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox img {
+    width: 85%;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox .conNum {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 5.5em;
+    font-weight: 700;
+    color: #fff;
+    font-family: "ProximaNova";
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox .conText {
+    margin-top: 30px;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox .conText .title {
+    width: 600px;
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox .conText .title.color {
+    color: #7F60FF;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox .conText .title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 30%;
+    height: 5px;
+    background: #fff;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox .conText .con {
+    font-size: 2em;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 1em;
+}
+
+.sub_modal .mainBoxText {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(0, -50%);
+    font-size: 2em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.sub_modal .mainBoxText .block {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sub_modal .mainBoxText .engText {
+    display: inline-block;
+    font-size: 2.5em;
+    font-family: "ProximaNova";
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+}
+
+.sub_modal .mainBoxText .engText::before {
+    content: "[";
+    display: block;
+    position: absolute;
+    top: 43%;
+    left: -35px;
+    transform: translate(0, -50%);
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0.4;
+}
+
+.sub_modal .mainBoxText .engText::after {
+    content: "]";
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: -35px;
+    transform: translate(0, -50%);
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0.4;
+}
+
+.sub_modal .subBoxText {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0, -50%);
+}
+
+.sub_modal .subBoxText .title {
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sub_modal .subBoxText .con {
+    font-size: 2em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 15px;
+}
+
+.sub_modal .subBoxText .go {
+    width: 75px;
+    height: auto;
+    margin-top: 30px;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "ProximaNova";
+    color: #fff;
+    position: relative;
+}
+
+.sub_modal .subBoxText .go::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: url(../../imgs/main/go_btn.png) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.serviceBox {
+    width: 800px;
+    height: 100vh;
+    background: #141313;
+    position: fixed;
+    top: 0;
+    right: -800px;
+    z-index: 99;
+    transition: 0.3s ease-out;
+}
+
+.serviceBox.on {
+    right: 0;
+    transition: 0.3s ease-out;
+}
+
+.serviceBox > .inner {
+    padding: 40px 60px 40px 60px;
+    position: relative;
+}
+
+.serviceBox .title {
+    font-size: 5em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 1px #fff;
+    font-family: "ProximaNova";
+}
+
+.modalBox {
+    overflow-y: scroll;
+}
+
+.modalBox::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modalBox::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.modalBox::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #999;
+}
+
+.modalBox::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+.modal_box .close,
+.modalBox .close {
+    font-size: 20px;
+    color: #fff;
+    font-family: "ProximaNova";
+    font-weight: 700;
+    padding-right: 40px;
+    background: url(../../imgs/common/closeBtn.png) right 0 center no-repeat;
+    background-size: 30px;
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    z-index: 9999999;
+}
+
+.modal_box .close:hover,
+.modalBox .close:hover {
+    background: url(../../imgs/common/closeBtn_on.png) right 0 center no-repeat;
+    color: #7F60FF;
+}
+
+.serviceBox .subTitle {
+    font-size: 4em;
+    font-family: "ProximaNova";
+    color: #fff;
+    font-weight: 700;
+    margin-top: 50px;
+    position: relative;
+}
+
+.serviceBox .subTitle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 350px;
+    height: 5px;
+    background: #fff;
+}
+
+.serviceBox .con_box {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.serviceBox .con_box .listTitle {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.serviceBox .con_box .listTitle span {
+    font-size: 1.28em;
+    -webkit-text-stroke: 1px #fff;
+    font-family: "ProximaNova";
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-right: 8px;
+}
+
+.serviceBox .con_box .img_box {
+    margin-top: 20px;
+}
+
+.slick-list {
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+
+.sub_modal .sPage {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%, 0);
+    width: 50%;
+    z-index: 99;
+}
+
+.sub_modal .sPage::after {
+    content: "";
+    display: block;
+    width: 98%;
+    height: 1px;
+    background: rgba(244, 244, 244, 0.2);
+    position: absolute;
+    left: 50%;
+    top: 3px;
+    transform: translate(-50%, 0);
+    z-index: -2;
+}
+
+.sub_modal .sPage .swiper-pagination-bullet {
+    float: left;
+    margin-right: calc(25% - 15px);
+    position: relative;
+    display: block;
+    cursor: pointer;
+    opacity: 1;
+    background: #757575;
+}
+
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet,
+.sub_modal .swiper-pagination4 .swiper-pagination-bullet{
+    margin-right: calc(50% - 20px);
+}
+
+.sub_modal .swiper-pagination5 .swiper-pagination-bullet{
+    margin-right: calc(100% - 24px);
+}
+
+.sub_modal .swiper-pagination6 .swiper-pagination-bullet{
+    margin-right: calc(33.333% - 16px);
+}
+
+.sub_modal .sPage .swiper-pagination-bullet:last-child {
+    margin-right: 0;
+}
+
+.sub_modal .sPage .swiper-pagination-bullet::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translate(-50%, 0);
+    color: #757575;
+    display: block;
+    width: 130px;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+.sub_modal .sPage .swiper-pagination-bullet:focus {
+    outline: none;
+}
+
+.sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    color: #7F60FF;
+    font-weight: 700;
+    background: #7F60FF;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #7F60FF;
+    background: #000;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    color: #7F60FF;
+}
+
+.sub_modal .swiper-pagination2 .swiper-pagination-bullet:first-child::after {
+    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
+    bottom: -43px;
+}
+
+.sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(2)::after {
+    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(3)::after {
+    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(4)::after {
+    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(5)::after {
+    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
+    font-size: 12px;
+}
+
+
+
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet:first-child::after {
+    content: "ìŠ¤ë§ˆíŠ¸ë§í¬";
+    bottom: -43px;
+}
+
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(2)::after {
+    content: "í•˜ë‚˜ì˜ ê°„ê²°í•œ ì˜¤ì¦ˆë§í¬";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(3)::after {
+    content: "ë‹¹ì‹  ìŒì•…ìœ¼ë¡œì˜ ì§€ë¦„ê¸¸";
+    font-size: 12px;
+}
+
+
+.sub_modal .swiper-pagination4 .swiper-pagination-bullet:first-child::after {
+    content: "ë®¤ì§€ì…˜ ì—‘ì…€ëŸ¬ë ˆì´í„°";
+    width: 135px;
+    bottom: -43px;
+}
+
+.sub_modal .swiper-pagination4 .swiper-pagination-bullet:nth-child(2)::after {
+    content: "ë§žì¶¤í˜• ì„±ìž¥ í”„ë¡œì íŠ¸";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination4 .swiper-pagination-bullet:nth-child(3)::after {
+    content: "ëª¨ë“  ê¶Œí•œì€ ë®¤ì§€ì…˜ì˜ ê²ƒ";
+    font-size: 12px;
+}
+
+
+
+
+.sub_modal .swiper-pagination5 .swiper-pagination-bullet:first-child::after {
+    content: "SUBSCRIPTION";
+    width: 135px;
+    bottom: -43px;
+}
+
+.sub_modal .swiper-pagination5 .swiper-pagination-bullet:nth-child(2)::after {
+    content: "ì˜¤ì¦ˆ êµ¬ë… ìš”ê¸ˆì œ";
+    font-size: 12px;
+}
+
+
+.sub_modal .swiper-pagination6 .swiper-pagination-bullet:first-child::after {
+    content: "SUBSCRIPTION";
+    width: 135px;
+    bottom: -43px;
+}
+
+.sub_modal .swiper-pagination6 .swiper-pagination-bullet:nth-child(2)::after {
+    content: "êµ¬ë…ë£Œ ë¬´ë£Œ";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination6 .swiper-pagination-bullet:nth-child(3)::after {
+    content: "PRO";
+    font-size: 12px;
+}
+
+.sub_modal .swiper-pagination6 .swiper-pagination-bullet:nth-child(4)::after {
+    content: "BASIC";
+    font-size: 12px;
+}
+
+
+
+
+
+/*.sub_modal .slick-dots li button {
+    background: none;
+    border: none;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    font-size: 0px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+
+
+.sub_modal .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translate(-50%, 0);
+}
+
+.sub_modal .slick-dots li {
+    float: left;
+    margin-right: 8.3vw;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.sub_modal .slick-dots li:last-child {
+    margin-right: 0;
+}
+
+.sub_modal .slick-dots li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, 0);
+    color: #757575;
+    display: block;
+    width: 130px;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+}*/
+
+/*.sub_modal .slick-dots li.slick-active::after {
+    color: #7F60FF;
+    font-weight: 700;
+}
+
+.mainBox2_modal .slick-dots li:first-child::after {
+    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
+    bottom: -33px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(2)::after {
+    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
+    font-size: 12px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(3)::after {
+    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
+    font-size: 12px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(4)::after {
+    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
+    font-size: 12px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(5)::after {
+    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
+    font-size: 12px;
+}*/
+
+.sub_modal .slick-dots li button {
+    background: none;
+    border: none;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    font-size: 0px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+.sub_modal .slick-dots li button {
+    margin-right: calc((100% - 170px) / 5);
+}
+
+.sub_modal .slick-dots li button:last-child {
+    margin-right: 0;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(2) button::after,
+.mainBox2_modal .slick-dots li:nth-child(3) button::after,
+.mainBox2_modal .slick-dots li:nth-child(5) button::after,
+.mainBox3_modal .slick-dots li:nth-child(2) button::after,
+.mainBox3_modal .slick-dots li:nth-child(3) button::after,
+.mainBox4_modal .slick-dots li:nth-child(2) button::after,
+.mainBox4_modal .slick-dots li:nth-child(3) button::after,
+.mainBox4_modal .slick-dots li:nth-child(4) button::after,
+.mainBox5_modal .slick-dots li:nth-child(2) button::after,
+.mainBox6_modal .slick-dots li:nth-child(2) button::after,
+.mainBox6_modal .slick-dots li:nth-child(3) button::after,
+.mainBox6_modal .slick-dots li:nth-child(4) button::after {
+    width: 6px;
+    height: 6px;
+}
+
+
+
+.sub_modal .slick-dots li button::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #757575;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub_modal .slick-dots li.slick-active button::after {
+    background: #7F60FF;
+}
+
+.sub_modal .slick-dots li.slick-active button {
+    border: 1px solid #7F60FF;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #000;
+}
+
+.sub_modal .mainBox2_modal .slick-dots::after {
+    width: 96%;
+}
+
+
+.sub_modal .slick-dots::after {
+    content: "";
+    display: block;
+    width: 96%;
+    height: 1px;
+    background: rgba(244, 244, 244, 0.2);
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    transform: translate(-50%, 0);
+}
+
+.mainBox3_modal.sub_modal .slick-dots::after,
+.mainBox4_modal.sub_modal .slick-dots::after {
+    width: 93%;
+}
+
+.mainBox5_modal.sub_modal .slick-dots::after {
+    width: 86%;
+}
+
+/*!-- start of :: mainBox3_modal  --*/
+.mainBox3_modal .slick-dots li:first-child::after {
+    content: "ìŠ¤ë§ˆíŠ¸ë§í¬";
+    bottom: -33px;
+}
+
+.mainBox3_modal .slick-dots li:nth-child(2)::after {
+    content: "í•˜ë‚˜ì˜ ê°„ê²°í•œ ì˜¤ì¦ˆë§í¬";
+    font-size: 12px;
+}
+
+.mainBox3_modal .slick-dots li:nth-child(3)::after {
+    content: "ë‹¹ì‹  ìŒì•…ìœ¼ë¡œì˜ ì§€ë¦„ê¸¸";
+    font-size: 12px;
+}
+
+/*!-- start of :: mainBox4_modal  --*/
+.mainBox4_modal .slick-dots li:first-child::after {
+    content: "ë®¤ì§€ì…˜ ì—‘ì…€ëŸ¬ë ˆì´í„°";
+    width: 135px;
+    bottom: -33px;
+}
+
+.mainBox4_modal .slick-dots li:nth-child(2)::after {
+    content: "ë§žì¶¤í˜• ì„±ìž¥ í”„ë¡œì íŠ¸";
+    font-size: 12px;
+}
+
+.mainBox4_modal .slick-dots li:nth-child(3)::after {
+    content: "ëª¨ë“  ê¶Œí•œì€ ë®¤ì§€ì…˜ì˜ ê²ƒ";
+    font-size: 12px;
+}
+
+
+.mainBox5_modal .slick-dots li:first-child::after {
+    content: "SUBSCRIPTION";
+    width: 135px;
+    bottom: -33px;
+}
+
+.mainBox5_modal .slick-dots li:nth-child(2)::after {
+    content: "ì˜¤ì¦ˆ êµ¬ë… ìš”ê¸ˆì œ";
+    font-size: 12px;
+}
+
+.mainBox6_modal .slick-dots li:first-child::after {
+    content: "SUBSCRIPTION";
+    width: 135px;
+}
+
+.mainBox6_modal .slick-dots li:nth-child(2)::after {
+    content: "êµ¬ë…ë£Œ ë¬´ë£Œ";
+}
+
+.mainBox6_modal .slick-dots li:nth-child(3)::after {
+    content: "PRO";
+    font-size: 12px;
+}
+
+.mainBox6_modal .slick-dots li:nth-child(4)::after {
+    content: "BASIC";
+    font-size: 12px;
+}
+
+
+
+@media(max-width:1600px) {
+    .sub_modal > .inner .slideWrap .slideList .slideConBox {
+        margin: 11em auto 0 auto;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox {
+        width: 80%;
+        max-width: 540px;
+        margin: 100px auto 0 auto;
+    }
+
+    .mainBox5_modal > .inner .slideWrap .slideList .slideConBox {
+        max-width: 900px;
+        width: 100%;
+        margin: 90px auto 0 auto;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox img {
+        width: 85%;
+        max-width: 500px;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox .conText .title {
+        font-size: 3em;
+        width: 100%;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox .conText .con {
+        font-size: 1.6em;
+    }
+
+    .serviceBox .title {
+        font-size: 2.8em;
+    }
+
+    .serviceBox .subTitle::after {
+        width: 30%;
+    }
+
+    .modalBox .close {
+        top: 24px;
+        right: 20px;
+    }
+
+    .slick-list {
+        width: 60%;
+    }
+
+    .sub_modal > .inner {
+        min-height: 750px;
+    }
+
+    .slideConBox .subscriptionBox .conBox.DistrBox {
+        height: 150px;
+    }
+
+    .slideConBox .subscriptionBox .conBox {
+        height: 50px;
+    }
+
+    .slideConBox .conBox .cateDesc li {
+        height: 50px;
+        line-height: 48px;
+    }
+
+    .slideConBox .Box_02 .conBox .cateDesc .list_h {
+        line-height: 32px;
+    }
+
+    .slideConBox .subscriptionBox.Box_02 .TitelBox .mainTit {
+        padding-top: 25px;
+    }
+
+    .slideConBox .subscriptionBox.Box_02 .TitelBox .pointTxt {
+        margin-top: 10px;
+    }
+
+    .slideConBox .subscriptionBox .TitelBox {
+        height: 190px;
+    }
+
+    .slideConBox .subscriptionBox .conBox.UpstreamBox {
+        margin-bottom: 20px;
+        height: 100px;
+    }
+
+    .slideConBox .conBox.DistrBox .cateTitle {
+        line-height: 150px;
+    }
+
+    .slideConBox .conBox .cateTitle {
+        line-height: 50px;
+    }
+
+    .sub_modal .mainBoxText .engText {
+        font-size: 2em;
+    }
+    
+    .sub_modal > .inner .slideWrap{
+        min-height: 750px;
+    }
+}
+
+@media(max-width:1300px) {
+    .sub_modal .slick-dots li {
+        margin-right: 10em;
+    }
+}
+
+@media(max-width:1000px) {
+    .sub_modal .mainBoxText .engText {
+        font-size: 2em;
+    }
+
+    .sub_modal .subBoxText .title {
+        font-size: 4em;
+        letter-spacing: -3px;
+    }
+    
+    .sub_modal .subBoxText{
+        right: 0;
+    }
+}
+
+@media(max-width:880px) {
+    .serviceBox {
+        width: 100%;
+        right: -880px;
+    }
+
+    .serviceBox > .inner {
+        padding: 20px 30px;
+    }
+
+    .serviceBox .con_box {
+        margin-top: 3em;
+    }
+
+    .serviceBox .title {
+        font-size: 3.5em;
+    }
+
+    .serviceBox .subTitle {
+        font-size: 2.5em;
+        margin-top: 2em;
+    }
+
+    .serviceBox .subTitle::after {
+        height: 3px;
+        width: 50%;
+    }
+
+    .serviceBox .con_box .listTitle {
+        font-size: 2em;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox .conNum {
+        top: -65px;
+        font-size: 4em;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox .conText .title::after {
+        display: none;
+    }
+
+    .modal_box .close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .modalBox .close {
+        top: 30px;
+        right: 30px;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox {
+        width: 100%;
+        margin: 20em auto 0 auto;
+    }
+
+    .mainBox6_modal > .inner .slideWrap .slideList .slideConBox {
+        margin: 8em auto 0 auto;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox img {
+        width: 100%;
+    }
+
+    .slick-list {
+        width: 90%;
+    }
+
+    .sub_modal .mainBoxText {
+        top: 16vh;
+        left: 26%;
+        transform: unset;
+        font-size: 1.4em;
+    }
+    
+    .sub_modal .swiper-pagination{
+        width: 70%;
+    }
+    
+    .sub_modal .swiper-pagination .swiper-pagination-bullet::after{
+        display: none;
+    }
+
+    .sub_modal .mainBoxText .block {
+        margin-left: -9%;
+    }
+
+    .sub_modal .mainBoxText .engText {
+        font-size: 2em;
+    }
+
+    .sub_modal .subBoxText {
+        top: 35%;
+        right: unset;
+        left: 20%;
+        transform: unset;
+        margin-top: 7vh;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox .conText .title {
+        font-size: 2.5em;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox .conText .con {
+        font-size: 1.5em;
+    }
+
+    .sub_modal .subBoxText .con {
+        font-size: 1.6em;
+    }
+
+    .sub_modal .slick-dots {
+        width: 80%;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox.subscriptionConBox {
+        width: 100%;
+    }
+
+    .m_block {
+        display: block;
+    }
+}
+
+@media(max-width:600px) {
+
+    .sub_modal .slideWrap2 .slick-dots li {
+        margin-right: calc(25% - 42.5px);
+    }
+
+    .sub_modal .slick-dots li {
+        margin-right: 18%;
+    }
+
+    .mainBox3_modal .slick-dots li,
+    .mainBox4_modal .slick-dots li {
+        margin-right: calc(50% - 51px);
+    }
+
+    .mainBox3_modal .slick-dots li:last-child,
+    .mainBox4_modal .slick-dots li:last-child {
+        margin-right: 0 !important;
+    }
+
+    .mainBox6_modal .slick-dots li {
+        margin-right: calc(33.33% - 45.3333px);
+    }
+
+    .mainBox6_modal .slick-dots li:last-child {
+        margin-right: 0 !important;
+    }
+
+    .sub_modal .slideWrap2 .slick-dots li:last-child {
+        margin-right: 0;
+    }
+
+    .sub_modal .slick-dots li::after {
+        font-size: 11px;
+        bottom: -25px;
+    }
+
+    .mainBox2_modal .slick-dots li:first-child::after {
+        content: "";
+    }
+
+    .mainBox2_modal .slick-dots li:nth-child(2)::after {
+        content: "";
+        font-size: 12px;
+    }
+
+    .mainBox2_modal .slick-dots li:nth-child(3)::after {
+        content: "";
+        font-size: 12px;
+    }
+
+    .mainBox2_modal .slick-dots li:nth-child(4)::after {
+        content: "";
+    }
+
+    .mainBox2_modal .slick-dots li:nth-child(5)::after {
+        content: "";
+        font-size: 12px;
+    }
+
+    .sub_modal .mainBoxText .engText::before {
+        left: -20px;
+    }
+
+    .sub_modal .mainBoxText .engText::after {
+        right: -20px;
+    }
+
+    .slick-dots li::after {
+        content: "" !important;
+    }
+}
+
+@media(max-width:500px) {
+
+    .mainBox .mainBoxSubText .textWrap,
+    .sub_modal .subBoxText .title {
+        font-size: 3.8em;
+    }
+
+    .sub_modal .slick-dots {
+        bottom: 7vh;
+    }
+
+    .sub_modal > .inner .slideWrap .slideList .slideConBox {
+        margin: 20vh auto 0 auto;
+    }
+
+    .mainBox6_modal.sub_modal > .inner .slideWrap .slideList .slideConBox {
+        margin: 8vh auto 0 auto;
+    }
+
+    .sub_modal > .inner .slideWrap {
+        min-height: unset;
+    }
+    
+    .sub_modal .sPage .swiper-pagination-bullet::after{
+        display: none !important;
+    }
+}

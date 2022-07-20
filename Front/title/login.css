@@ -201,7 +201,7 @@ form.sign-in-form {
     color: #fff;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
-    transform: translate(-200px, 80px);
+    transform: translate(-150px, -103px);
 
 }
 
@@ -258,7 +258,7 @@ form.sign-in-form {
 
 .container.sign-up-mode .right-panel .image,
 .container.sign-up-mode .right-panel .content {
-    transform: translate(-55px, 55px);
+    transform: translate(-55px, -135px);
 }
 
 .container.sign-up-mode .left-panel {

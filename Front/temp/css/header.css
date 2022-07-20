@@ -1,0 +1,308 @@
+#header .logo {
+    position: fixed;
+    top: 50px;
+    left: 60px;
+    width: 99px;
+    height: 34px;
+    z-index: 99;
+}
+
+.nav {
+    width: 560px;
+    position: fixed;
+    top: 50px;
+    left: 45%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+}
+
+.nav ul li {
+    float: left;
+    margin-right: 4em;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    font-family: "ProximaNova";
+}
+
+.nav ul li.on a {
+    font-weight: 700;
+}
+
+.nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0px;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.nav ul li.on a::after {
+    width: 100%;
+    height: 2px;
+    transition: all 0.2s;
+}
+
+.callNav {
+    position: fixed;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 99;
+    transition: all 0.3s ease-in;
+    top: 25px;
+    right: 5%;
+    display: none;
+}
+
+.callNav .menu {
+    color: #fff;
+    font-size: 20px;
+    left: 30px;
+    width: 80px;
+    height: auto;
+}
+
+.callNav .menu .close {
+    display: none;
+}
+
+.callNav > div {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 50px;
+    transition: all 0.1s ease-in;
+}
+
+.callNav > div:nth-child(2){
+    width: 70%;
+}
+
+.callNav.on > div:nth-child(2){
+    width: 100%;
+}
+
+.callNav > div.menu {
+    background: none !important;
+}
+
+.callNav .bar1 {
+    top: 0px;
+    right: 0;
+}
+
+.callNav .bar2 {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.callNav .bar3 {
+    bottom: 0;
+    left: 0;
+}
+
+.callNav:hover .bar1 {
+    width: 100%;
+}
+
+.callNav:hover .bar3 {
+    width: 100%;
+}
+
+.callNav.active > div {
+    background: #000;
+    transition: all 0.3s ease-in;
+}
+
+.callNav.active > div.back {
+    background: none !important;
+}
+
+.callNav.active .bar1 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(135deg);
+}
+
+.callNav.active .bar2 {
+    display: none;
+}
+
+.callNav.active .bar3 {
+    bottom: 50%;
+    transform: translate(0, 50%) rotate(-135deg);
+}
+
+
+
+.navBtn {
+    position: fixed;
+    top: 50%;
+    right: 8em;
+    transform: translate(0, -50%);
+    z-index: 99;
+}
+
+.navBtn ul {}
+
+.navBtn ul li {
+    display: block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.navBtn ul li.on {
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.navBtn ul li a {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navBtn ul li.on a {
+    color: greenyellow;
+    font-weight: bold;
+    background: #fff;
+}
+
+.btnWrap {
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    z-index: 99;
+}
+
+.btnWrap a {
+    width: 6.785em;
+    height: 2.285em;
+    line-height: 2.285em;
+    margin-right: 1.42em;
+    display: block;
+    float: left;
+    font-size: 1.4em;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    font-family: "ProximaNova";
+    font-weight: 700;
+}
+
+.btnWrap a:last-child {
+    margin-right: 0;
+}
+
+.btnWrap a.bg {
+    background: #4517C4;
+}
+
+.btnWrap a.col {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+}
+
+.btnWrap a.help {
+    text-indent: 20px;
+    background: url(../../imgs/common/help.png) 20px center no-repeat #4517C4;
+    background-size: 16px;
+}
+
+@media(max-width:1600px) {
+
+    .nav {
+        width: 500px;
+    }
+
+    .nav ul li {
+        margin-right: 4em;
+    }
+}
+
+@media(max-width:1300px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media(max-width:880px) {
+
+    .navBtn {
+        right: 5%;
+    }
+
+    .btnWrap {
+        top: 52px;
+        right: 40px;
+    }
+}
+
+@media(max-width:600px) {
+
+    #header .logo {
+        left: 30px;
+        width: 68px;
+        top: 20px;
+    }
+
+    .navBtn ul li {
+        width: 26px;
+        height: 26px;
+    }
+
+    .callNav {
+        display: block;
+    }
+
+    .btnWrap {
+        top: 20px;
+        margin-right: 2em;
+    }
+
+    .btnWrap a{
+        width: 5.5em;
+        height: 2em;
+        line-height: 2em;
+        margin-right: 1em;
+    }
+
+    .btnWrap a.service {
+        display: none;
+    }
+
+    .btnWrap > .inner a:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .btnWrap a.help {
+        background: url(../../imgs/common/help.png) 10px center no-repeat #4517C4;
+        text-indent: 12px;
+    }
+
+    .navBtn ul li a {
+        width: 6px;
+        height: 6px;
+    }
+}

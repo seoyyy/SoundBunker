@@ -51,6 +51,9 @@ svg {
     stroke-dashoffset: 35%;
 }
 
+.cover {
+    background: rgba(106, 122, 232, 0.5);
+}
 @keyframes stroke-offset {
     65% {
         stroke-dashoffset: 20%;
