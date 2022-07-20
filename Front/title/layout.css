@@ -17,8 +17,8 @@
     width: 80%;
 }
 
-div .screen{
-    background: url('/Front/img/원본포레스트.jpg') no-repeat center center fixed; 
+#main > div > img{
+    background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
