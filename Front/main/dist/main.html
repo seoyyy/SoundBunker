@@ -11,14 +11,15 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
+    
 <body class="body" onload="checkTime();">
   <!-- <div class="ipadBox">
     <button class="powerButton" onclick="powerMe();">I</button> -->
     <div class="ipadScreen">
       <div class="wallpaper">
         <div class="statusBar"></div>
-        <div class="dockWrapper">
+        <div class="dockWrapper" style="bottom: 3%;">
           <div class="dockbar">
             <div class="iconDiv" onclick="window.barColor='white';">
             </div>
@@ -38,14 +39,17 @@
           </div>
         </div>
       </div>
-      <div class="lockScreen" onclick="lockClick();">
+
+      <!-- 잠금화면(안 씀) -->
+      <!-- <div class="lockScreen" onclick="lockClick();">
         <div class="lockContent">
           <div class="statusBar"></div>
           <div class="lockIcon"></div>
           <div class="lockTime">9:41<br />Saturday, August 17</div>
         </div>
         <div class="interactionBar"></div>
-      </div>
+      </div> -->
+
       <!-- 어플 실행시 나오는 홈바 -->
       <div class="interactionBar" id="inAppBar" onclick="goHome();"></div>
     </div>
@@ -63,12 +67,13 @@
       <!-- ipad_icon -->
         <div class="container" id="ipad_icon">
         <div class="btn btn1" id="btn1"></div>
-        <div class="btn btn2" id="btn2" onclick="openFullScreenMode()"></div>
+        <!-- <div class="btn btn2" id="btn2" onclick="openFullScreenMode()"></div> -->
         <div class="btn btn3" id="btn3"></div>
         </div>
         <a href="https://codepen.io/dev_loop" target="_blank">Check Out My Other Pens</a>
+    
       <!-- category icon img -->
-      <img src="/dist/img/dumbbell-removebg-preview (3).png" id="dumbbell"  onclick="window.location.href = '/Front/title/fullscreen.html'">>
+      <img src="/dist/img/dumbbell-removebg-preview (3).png" id="dumbbell">
       <img src="/dist/img/book-removebg-preview.png" id="book">
       <img src="/dist/img/cleaner-removebg-preview (3).png" id="cleaner">
     
