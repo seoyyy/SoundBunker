@@ -1,32 +1,36 @@
+/* 로고 이미지 */
 #header .logo {
     position: fixed;
-    top: 50px;
+    top: 10px;
     left: 60px;
     width: 99px;
     height: 34px;
     z-index: 99;
 }
 
+/* 헤더 상단바 */
 .nav {
     width: 560px;
     position: fixed;
     top: 50px;
-    left: 45%;
+    left: 55%;
     transform: translate(-50%, 0);
     z-index: 99;
 }
 
+/* 헤더 상단바 옆에서부터 나열 오른쪽  */
 .nav ul li {
     float: left;
     margin-right: 4em;
 }
+
 
 .nav ul li:last-child {
     margin-right: 0;
 }
 
 .nav ul li a {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     position: relative;
     font-family: "ProximaNova";
@@ -189,6 +193,7 @@
     background: #fff;
 }
 
+/* Sign, Service 버튼 위치  */
 .btnWrap {
     position: fixed;
     top: 40px;
@@ -196,25 +201,37 @@
     z-index: 99;
 }
 
+/* Sign, Service 글자위치, */
 .btnWrap a {
     width: 6.785em;
     height: 2.285em;
+/* 글자 높이 */
     line-height: 2.285em;
+/* 마진 오른쪽  */
     margin-right: 1.42em;
     display: block;
+/* 버튼 왼쪽부터 시작 */
     float: left;
-    font-size: 1.4em;
+/* 버튼 글자 크기 및 버튼 크기 */
+    font-size: 1.8em;
+/* 버튼 글자색 */
     color: #fff;
+/* 버튼 글자 가운데 */
     text-align: center;
+/* 버튼 모서리  */
     border-radius: 100px;
+/* 폰트 */
     font-family: "ProximaNova";
+/* 폰트 굵기 */
     font-weight: 700;
 }
 
+/* 버튼 a 태그 뒤 마진 오른쪽 0  */
 .btnWrap a:last-child {
     margin-right: 0;
 }
 
+/* Service 버튼 색 */
 .btnWrap a.bg {
     background: #4517C4;
 }
@@ -224,11 +241,11 @@
     box-sizing: border-box;
 }
 
-.btnWrap a.help {
+/* .btnWrap a.help {
     text-indent: 20px;
     background: url(../../imgs/common/help.png) 20px center no-repeat #4517C4;
     background-size: 16px;
-}
+} */
 
 @media(max-width:1600px) {
 

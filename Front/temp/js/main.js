@@ -62,34 +62,34 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(document).scrollTop() > section.top - 200) {
-            $('.copyright').css('display', 'none')
-            $('.credit').css('display', 'block')
+            // $('.copyright').css('display', 'none')
+            // $('.credit').css('display', 'block')
         }
         if ($(document).scrollTop() > section1.top - 200) {
             $('.nav ul li').removeClass('on');
-            $('.nav .distribution').addClass('on')
-            $('.copyright').css('display', 'block')
-            $('.credit').css('display', 'none')
+            $('.nav .category').addClass('on')
+            // $('.copyright').css('display', 'block')
+            // $('.credit').css('display', 'none')
         }
         if ($(document).scrollTop() > section2.top - 200) {
             $('.nav ul li').removeClass('on');
-            $('.nav .marketing').addClass('on')
-            $('.copyright').css('display', 'block')
-            $('.credit').css('display', 'none')
+            $('.nav .cammode').addClass('on')
+            // $('.copyright').css('display', 'block')
+            // $('.credit').css('display', 'none')
         }
         if ($(document).scrollTop() > section3.top - 200) {
             $('.nav ul li').removeClass('on');
-            $('.nav .upstream').addClass('on')
+            $('.nav .playlist').addClass('on')
             $('.scrollDown').css('display', 'block')
-            $('.copyright').css('display', 'block')
-            $('.credit').css('display', 'none')
+            // $('.copyright').css('display', 'block')
+            // $('.credit').css('display', 'none')
         }
         if ($(document).scrollTop() > section4.top - 200) {
             $('.nav ul li').removeClass('on');
-            $('.nav .subscription').addClass('on')
+            $('.nav .team').addClass('on')
             $('.scrollDown').css('display', 'none')
-            $('.copyright').css('display', 'none')
-            $('.credit').css('display', 'none')
+            // $('.copyright').css('display', 'none')
+            // $('.credit').css('display', 'none')
         }
     });
 
@@ -132,61 +132,4 @@ $(document).ready(function () {
         $('.serviceBox').removeClass('on')
     })
     
-    /*//slick
-    $('.slideWrap').slick({
-        centerMode: true,
-        centerPadding: '20%',
-        infinite: false,
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        responsive: [
-            {
-                breakpoint: 1600,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '20%',
-                    slidesToShow: 1
-                }
-      },
-            {
-                breakpoint: 540,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '0px',
-                    slidesToShow: 1
-                }
-      }
-    ]
-    });
-
-    let blocked = false;
-    let blockTimeout = null;
-    let prevDeltaY = 0;
-
-    $(".slideWrap").on('mousewheel DOMMouseScroll wheel', (function (e) {
-        let deltaY = e.originalEvent.deltaY;
-        e.preventDefault();
-        e.stopPropagation();
-
-        clearTimeout(blockTimeout);
-        blockTimeout = setTimeout(function () {
-            blocked = false;
-        }, 50);
-
-
-        if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
-            blocked = true;
-            prevDeltaY = deltaY;
-
-            if (deltaY > 0) {
-                $(this).slick('slickNext');
-            } else {
-                $(this).slick('slickPrev');
-            }
-        }
-    }));*/
-
 });

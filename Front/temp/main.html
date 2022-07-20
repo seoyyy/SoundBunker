@@ -71,15 +71,20 @@
                 <!-- logo 클릭시 새로고침 -->
                 <a href="main.html">
                     <!-- logo 이미지 -->
-                    <img src="imgs/common/logo.png" alt="logo" id="home_btn_logo">
+                    <img src="/Front/img/logo.png" alt="logo" id="home_btn_logo" style="width: 140%;">
                 </a>
             </h1>
+
+            <!-- 헤더 상단 바  -->
             <div class="nav">
                 <ul>
-                    <li class="distribution"><a id="gnb_distribution" href="#distribution">DISTRIBUTION</a></li>
-                    <li class="marketing"><a id="gnb_marketing" href="#marketing">MARKETING</a></li>
-                    <li class="upstream"><a id="gnb_upstream" href="#upstream">UPSTREAM</a></li>
-                    <li class="subscription"><a id="gnb_subscription" href="#subscription">SUBSCRIPTION</a></li>
+                    <!-- 헤더 select 바 -->
+                    <!-- main,js 63~94 on 뒤에 생성되면 밑줄 그어지며 글씨 굵어짐-->
+                    <!-- li의 a 태그 id 바꿔야함 -->
+                    <li class="category"><a id="gnb_category" href="#category">CATEGORY</a></li>
+                    <li class="cammode"><a id="gnb_cammode" href="#cammode">CAMMODE</a></li>
+                    <li class="playlist"><a id="gnb_playlist" href="#playlist">PLAYLIST</a></li>
+                    <li class="team"><a id="gnb_team" href="#team">TEAM</a></li>
                 </ul>
             </div>
             <div class="navBtn">
@@ -102,7 +107,7 @@
                             <!-- <a id="btn_help" href="https://service.oz-z.com/support/help" target="_blank"
                                 class="bg help">HELP</a> -->
                             <a id="btn_signup" href="/Front/title/login.html" target="_blank"
-                                class="col signUp">SIGN UP</a>
+                                class="col signUp">Sign</a>
                             <a id="btn_service" href="#none" class="bg service">SERVICE</a>
                         </div>
                     </div>
@@ -111,9 +116,7 @@
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                     </div>
-                    <div class="scrollDown"></div>
-                    <p id="credit" class="credit">MusicVideo Credit</p>
-                    <p class="copyright" style="display: none;">ⓒ MOUND MEDIA</p>
+                    <!-- <div class="scrollDown"></div> -->
                 </div>
                 <div class="mainBoxWrap">
                     <div class="mainBox mainBox_01">
@@ -136,11 +139,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mainBox mainBox_02" id="distribution">
+
+                    <!-- 카테고리 -->
+                    <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
+                    <div class="mainBox mainBox_02" id="category" style="background-color: rebeccapurple;">
                         <div class="conWrap">
                             <div class="mainBoxText">
                                 <span class="block">뮤지션 서비스, OZZ</span>
-                                <span class="engText">DISTRIBUTION</span>
+                                <span class="engText">CATEGORY</span>
                             </div>
                             <div class="mainBoxSubText modalBtn_2 modal_btn" id="more_distribution">
                                 <div class="textWrap">
@@ -152,7 +158,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mainBox mainBox_03" id="marketing">
+
+                    <!-- 캠모드 -->
+                    <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
+                    <div class="mainBox mainBox_03" id="cammode" style="background-color: lightblue;">
                         <div class="conWrap">
                             <div class="mainBoxText">
                                 <span class="block">뮤지션 서비스, OZZ</span>
@@ -168,7 +177,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mainBox mainBox_04" id="upstream">
+
+                    <!-- 플레이리스트 -->
+                    <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
+                    <div class="mainBox mainBox_04" id="playlist" style="background-color: peachpuff;">
                         <div class="conWrap">
                             <div class="mainBoxText">
                                 <span class="block">뮤지션 서비스, OZZ</span>
@@ -184,7 +196,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mainBox mainBox_05" id="subscription">
+
+                    <!-- 개발진 -->
+                    <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
+                    <div class="mainBox mainBox_05" id="team" style="background-color: cadetblue;">
                         <div class="conWrap">
                             <div class="mainBoxText">
                                 <span class="block">뮤지션 서비스, OZZ</span>
@@ -202,7 +217,7 @@
                     </div>
                     <div class="footer">
                         <div class="inner">
-                            <div class="logo"><a href="index.html"><img src="imgs/common/logo.png" alt="logo"></a>
+                            <div class="logo"><a href="index.html"><img src="/Front/img/logo.png" alt="logo"></a>
                             </div>
                             <div class="contents">
                                 <div class="link">
