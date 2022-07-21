@@ -3,54 +3,56 @@ $(document).ready(function () {
     $('.btnWrap .service').click(function () {
         $('.modalBox').addClass('on')
         $('.modalBg').addClass('on')
-        /*$('.modalBg').on('scroll touchmove mousewheel', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            return false;
-        });*/
     })
 
-    //모달 열기 시 스크롤 사용 금지
-    /*$('.modal_btn').click(function () {
-        $('.modal_box').on('scroll touchmove mousewheel', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            return false;
-        });
-    })*/
-
+    
 
     //모달 닫기, 스크롤 사용 가능
     $('.modalClose').click(function () {
+        // 스크롤 닫기
         $('.modalBox').removeClass('on')
+        // 스크롤만 닫고 뒤에 배경있음
         $('.modal_box').removeClass('on')
+        //  아예 다닫기
         $('.modalBg').removeClass('on')
         $('.modalBg').off('scroll touchmove mousewheel');
     })
 
+    // 서비스가이드 카테고리 버튼
     $('.modalBtn_2').click(function () {
         $('.modal_box').removeClass('on')
         $('.modalBox').removeClass('on')
         $('.mainBox2_modal').addClass('on')
     })
 
+    // 서비스가이드 캠모드 버튼
     $('.modalBtn_3').click(function () {
         $('.modal_box').removeClass('on')
         $('.modalBox').removeClass('on')
         $('.mainBox3_modal').addClass('on')
     })
 
+    // 플레이리스트 팀 버튼
     $('.modalBtn_4').click(function () {
         $('.modal_box').removeClass('on')
         $('.modalBox').removeClass('on')
         $('.mainBox4_modal').addClass('on')
     })
 
+    // 서비스가이드 팀 버튼
     $('.modalBtn_5').click(function () {
-        $('.modal_box').removeClass('on')
         $('.modalBox').removeClass('on')
-        $('.mainBox5_modal').addClass('on')
-        $('.mainBox6_modal').addClass('on')
+        $('.modal_box').removeClass('on')
+        $('.modalBg').removeClass('on')
+        $('.nav ul li').removeClass('on');
+        $('.nav .team').addClass('on')
+        $('.scrollDown').css('display', 'none')
+        // $('.modalBg').off('scroll touchmove mousewheel');
+
+        // $('.modal_box').removeClass('on')
+        // $('.modalBox').removeClass('on')
+        // $('.mainBox5_modal').addClass('on')
+        // $('.mainBox6_modal').addClass('on')
     })
 
     //화면별 메뉴 선택표시 추가
@@ -93,7 +95,7 @@ $(document).ready(function () {
         }
     });
 
-    //메뉴 클릭 시 이동
+    //a 클릭 시 이동
     $('a').click(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
@@ -102,21 +104,12 @@ $(document).ready(function () {
     });
 
 
-    //모바일 메뉴 닫기,열기
-    /*$('.callNav').click(function () {
-        $(this).toggleClass('active');
-        $('.btnWrap').toggleClass('on');
-    })*/
 
-    // $('.callNav').hover(function(){
-    //     $(this).toggleClass('on')
-    // })
-
-    //  서비스 메뉴 온 오프
-    // $('.callNav').click(function(){
-    //     $('.modalBg').addClass('on')
-    //     $('.serviceBox').addClass('on')
-    // })
+    // 서비스 메뉴 온 오프
+    $('.callNav').click(function(){
+        $('.modalBg').addClass('on')
+        $('.serviceBox').addClass('on')
+    })
 
     $('.subscriptionBox.Box_02').click(function () {
         $('.subscriptionBox').removeClass('on')
@@ -133,4 +126,13 @@ $(document).ready(function () {
         $('.serviceBox').removeClass('on')
     })
     
+    //모바일 메뉴 닫기,열기
+    // ('.callNav').click(function () {
+    //     $(this).toggleClass('active');
+    //     $('.btnWrap').toggleClass('on');
+    // })
+
+    // $('.callNav').hover(function(){
+    //     $(this).toggleClass('on')
+    // })
 });
