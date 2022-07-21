@@ -108,14 +108,15 @@ $(document).ready(function () {
         $('.btnWrap').toggleClass('on');
     })*/
 
-    $('.callNav').hover(function(){
-        $(this).toggleClass('on')
-    })
+    // $('.callNav').hover(function(){
+    //     $(this).toggleClass('on')
+    // })
 
-    $('.callNav').click(function(){
-        $('.modalBg').addClass('on')
-        $('.serviceBox').addClass('on')
-    })
+    //  서비스 메뉴 온 오프
+    // $('.callNav').click(function(){
+    //     $('.modalBg').addClass('on')
+    //     $('.serviceBox').addClass('on')
+    // })
 
     $('.subscriptionBox.Box_02').click(function () {
         $('.subscriptionBox').removeClass('on')

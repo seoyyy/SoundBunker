@@ -32,6 +32,7 @@
     z-index: 99;
 }
 
+/* 1번 서비스 설명 백그라운드 */
 .mainBox2_modal {
     background: url(../../imgs/main/modal_bg2.png) 0 0 no-repeat;
     background-size: cover;
@@ -278,6 +279,7 @@
     height: 0;
 }
 
+/* 서비스 오픈후 클릭하였을때 나오는 스크린 Back 버튼 상자 */
 .modal_box .close,
 .modalBox .close {
     font-size: 20px;
@@ -285,8 +287,7 @@
     font-family: "ProximaNova";
     font-weight: 700;
     padding-right: 40px;
-    background: url(../../imgs/common/closeBtn.png) right 0 center no-repeat;
-    background-size: 30px;
+    background: url(/Front/img/close.png) right 0 center no-repeat;
     display: block;
     position: absolute;
     top: 50px;
@@ -296,7 +297,7 @@
 
 .modal_box .close:hover,
 .modalBox .close:hover {
-    background: url(../../imgs/common/closeBtn_on.png) right 0 center no-repeat;
+    background: url(/Front/img/closecolor.png) right 0 center no-repeat;
     color: #7F60FF;
 }
 
@@ -542,84 +543,6 @@
 
 
 
-
-
-/*.sub_modal .slick-dots li button {
-    background: none;
-    border: none;
-    outline: none;
-    width: 34px;
-    height: 34px;
-    font-size: 0px;
-    cursor: pointer;
-    position: relative;
-    z-index: 99;
-}
-
-
-
-.sub_modal .slick-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translate(-50%, 0);
-}
-
-.sub_modal .slick-dots li {
-    float: left;
-    margin-right: 8.3vw;
-    position: relative;
-    display: block;
-    cursor: pointer;
-}
-
-.sub_modal .slick-dots li:last-child {
-    margin-right: 0;
-}
-
-.sub_modal .slick-dots li::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -30px;
-    transform: translate(-50%, 0);
-    color: #757575;
-    display: block;
-    width: 130px;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: 400;
-}*/
-
-/*.sub_modal .slick-dots li.slick-active::after {
-    color: #7F60FF;
-    font-weight: 700;
-}
-
-.mainBox2_modal .slick-dots li:first-child::after {
-    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
-    bottom: -33px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(2)::after {
-    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
-    font-size: 12px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(3)::after {
-    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
-    font-size: 12px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(4)::after {
-    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
-    font-size: 12px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(5)::after {
-    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
-    font-size: 12px;
-}*/
 
 .sub_modal .slick-dots li button {
     background: none;
