@@ -9,8 +9,7 @@ if (7 <= hour && hour <= 18){  // 오전7 이상 오후 6시 미만
 console.log(hour)
 
 // 클릭모션으로 다크모드 이벤트
-const checkbox = 
-document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('click', () => {
     if (document.body.classList.contains('light')){
         document.body.classList.remove('light')

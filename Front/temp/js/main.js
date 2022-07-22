@@ -34,9 +34,9 @@ $(document).ready(function () {
 
     // 플레이리스트 팀 버튼
     $('.modalBtn_4').click(function () {
-        $('.modal_box').removeClass('on')
         $('.modalBox').removeClass('on')
-        $('.mainBox4_modal').addClass('on')
+        $('.modal_box').removeClass('on')
+        $('.modalBg').removeClass('on')
     })
 
     // 서비스가이드 팀 버튼
@@ -44,9 +44,6 @@ $(document).ready(function () {
         $('.modalBox').removeClass('on')
         $('.modal_box').removeClass('on')
         $('.modalBg').removeClass('on')
-        $('.nav ul li').removeClass('on');
-        $('.nav .team').addClass('on')
-        $('.scrollDown').css('display', 'none')
         // $('.modalBg').off('scroll touchmove mousewheel');
 
         // $('.modal_box').removeClass('on')
@@ -136,3 +133,15 @@ $(document).ready(function () {
     //     $(this).toggleClass('on')
     // })
 });
+
+//  play List 클릭시 Play list main 으로 이동
+function move_playlist(){
+    var element = document.getElementById("playlist");
+    element.scrollIntoView();
+}
+
+//  team 클릭시 team main 으로 이동
+function move_team(){
+    var element = document.getElementById("team");
+    element.scrollIntoView();
+}

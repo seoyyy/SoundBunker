@@ -19,6 +19,7 @@
     <script src="/jquery-3.6.0.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
+    <script src="/Front/temp/js/swiper.js"></script>
 
     <!-- start : 백그라운드 비디오 -->
     <script>
@@ -28,8 +29,11 @@
             console.log("START LOAD");
             try {
                 var videoUrl = [
-                    "https://oz-z.com/videos/rainbow99_altteureu.mp4",
-                    "https://oz-z.com/videos/rainbow99_together,_dog.mp4",
+                    "/Front/img/훌라훌라.mov",
+                    "/Front/img/요가.mov",
+                    "/Front/img/청소.mov",
+                    "/Front/img/공부.mp4",
+                    // 큰형DJ "https://oz-z.com/videos/rainbow99_together,_dog.mp4",
                     "https://oz-z.com/videos/we_are_the_night_dream_catcher.mp4",
                 ];
                 var videoStr = [
@@ -127,8 +131,8 @@
 
                         <div class="conWrap">
                             <div class="mainText">
-                                너는 <span>사운드</span>만 해,<br>
-                                다음은 <span>벙커</span>가<br>
+                                서영 <span>넌</span>듣기만 해,<br>
+                                다음은 <span>교자</span>가<br>
                                 할게.
                             </div>
                             <div class="serviceSlot">
@@ -270,13 +274,13 @@
                     <!-- 카테고리 서비스가이드 -->
                     <div class="subTitle">CATEGORY</div>
                     <div class="con_box modalBtn_2" id="btn_release_modal">
-                        <p class="listTitle" id="release_text"><span>01</span>글로벌 음원 발매</p>
+                        <p class="listTitle" id="release_text"><span>○</span>글로벌 음원 발매</p>
                         <div class="img_box">
                             <img src="imgs/main/service_01.png" alt="" id="release_img">
                         </div>
                     </div>
                     <div class="con_box modalBtn_2" id="btn_mv_modal">
-                        <p class="listTitle" id="mv_text"><span>02</span>뮤직비디오 심의</p>
+                        <p class="listTitle" id="mv_text"><span>○</span>뮤직비디오 심의</p>
                         <div class="img_box">
                             <img src="imgs/main/service_02.png" alt="" id="mv_img">
                         </div>
@@ -285,25 +289,25 @@
                     <!-- 캠모드 서비스가이드 -->
                     <div class="subTitle">CAMMODE</div>
                     <div class="con_box modalBtn_3" id="btn_smartlink_modal">
-                        <p class="listTitle" id="smartlink_text"><span>01</span>하나의 간결한 오즈링크</p>
+                        <p class="listTitle" id="smartlink_text"><span>○</span>하나의 간결한 오즈링크</p>
                         <div class="img_box">
                             <img src="imgs/main/service_03.png" alt="" id="smarlink_img">
                         </div>
                     </div>
 
                     <!-- 플레이리스트 서비스가이드 -->
-                    <div class="subTitle">PLAYLIST</div>
+                    <div class="subTitle"  style="cursor: pointer;">PLAYLIST</div>
                     <div class="con_box modalBtn_4" id="btn_accelerator_modal">
-                        <p class="listTitle" id="accelerator_text"><span>01</span>맞춤형 성장 프로젝트</p>
+                        <p class="listTitle" id="accelerator_text" onclick="move_playlist()"><span>○</span>나만의 플레이리스트</p>
                         <div class="img_box">
                             <img src="imgs/main/service_05.png" alt="" id="accelerator_img">
                         </div>
                     </div>
 
                     <!-- 제작자 서비스가이드 -->
-                    <div class="subTitle">BPMTEAM</div>
+                    <div class="subTitle"  style="cursor: pointer;">BPMTEAM</div>
                     <div class="con_box modalBtn_5" id="btn_subscription_modal">
-                        <p class="listTitle" id="subscription_text"><span>01</span>Bunker PlayList Manager</p>
+                        <p class="listTitle" id="subscription_text" onclick="move_team()"><span>○</span>Bunker PlayList Manager</p>
                         <div class="img_box">
                             <img src="imgs/main/service_07.png" alt="" id="subscription_img">
                         </div>
@@ -750,6 +754,7 @@
     <!-- end of :: contents -->
     </div>
     <!-- end : 메인 전체-->
+    
 </body>
 
 </html>

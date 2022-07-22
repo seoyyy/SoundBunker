@@ -32,9 +32,9 @@
     z-index: 99;
 }
 
-/* 1번 서비스 설명 백그라운드 */
+/* 서비스가이드 카테고리 설명 백그라운드이미지 */
 .mainBox2_modal {
-    background: url(../../imgs/main/modal_bg2.png) 0 0 no-repeat;
+    background: url(https://www.oz-z.com/imgs/main/modal_bg2.png) 0 0 no-repeat;
     background-size: cover;
 }
 
@@ -52,7 +52,7 @@
     background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
     background-size: cover;
 }
-
+/* 서비스가이드 카테고리 설명 백그라운드이미지 끝 */
 .mainBox6_modal {
     background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
     background-size: cover;
@@ -302,7 +302,7 @@
 }
 
 .serviceBox .subTitle {
-    font-size: 4em;
+    font-size: 2.8em;
     font-family: "ProximaNova";
     color: #fff;
     font-weight: 700;
