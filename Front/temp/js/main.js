@@ -52,6 +52,13 @@ $(document).ready(function () {
         // $('.mainBox6_modal').addClass('on')
     })
 
+    // Guide 안 GO 버튼
+    $('.catego').click(function () {
+        $('.modalBox').removeClass('on')
+        $('.modal_box').removeClass('on')
+        $('.modalBg').removeClass('on')
+    })
+
     //화면별 메뉴 선택표시 추가
     var section = $('.mainBox_01').offset();
     var section1 = $('.mainBox_02').offset();
@@ -134,7 +141,20 @@ $(document).ready(function () {
     // })
 });
 
+
+
+
 //  play List 클릭시 Play list main 으로 이동
+function move_category(){
+    var element = document.getElementById("category");
+    element.scrollIntoView();
+}
+
+//  team 클릭시 team main 으로 이동
+function move_cammode(){
+    var element = document.getElementById("cammode");
+    element.scrollIntoView();
+}
 function move_playlist(){
     var element = document.getElementById("playlist");
     element.scrollIntoView();

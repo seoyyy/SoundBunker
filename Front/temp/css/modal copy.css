@@ -32,34 +32,30 @@
     z-index: 99;
 }
 
-/* 서비스가이드 클릭시 백그라운드 */
+/* 서비스가이드 카테고리 설명 백그라운드이미지 */
 .mainBox2_modal {
     background: url(https://www.oz-z.com/imgs/main/modal_bg2.png) 0 0 no-repeat;
     background-size: cover;
 }
 
 .mainBox3_modal {
-    background: url(https://www.oz-z.com/imgs/main/modal_bg3.png) 0 0 no-repeat;
+    background: url(../../imgs/main/modal_bg3.png) 0 0 no-repeat;
     background-size: cover;
 }
 
 .mainBox4_modal {
-    background: url(https://www.oz-z.com/imgs/main/modal_bg4.png) 0 0 no-repeat;
+    background: url(../../imgs/main/modal_bg4.png) 0 0 no-repeat;
     background-size: cover;
 }
 
 .mainBox5_modal {
-    background: url(https://www.oz-z.com/imgs/main/modal_bg5.png) 0 0 no-repeat;
-    background-size: cover;
-}
-
-.mainBox6_modal {
     background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
     background-size: cover;
 }
-
-.modal_box .slideList {
-    position: relative;
+/* 서비스가이드 카테고리 설명 백그라운드이미지 끝 */
+.mainBox6_modal {
+    background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
+    background-size: cover;
 }
 
 .sub_modal > .inner {
@@ -74,9 +70,6 @@
     position: relative;
 }
 
-.sub_modal > .inner .slideWrap .slideList {
-    height: 100vh;
-}
 
 .sub_modal > .inner .slideWrap .slideList .slideConBox {
     width: 70em;
@@ -86,9 +79,8 @@
     background-size: contain;
 }
 
-/* img 풀스크린일때  */
 .sub_modal > .inner .slideWrap .slideList .slideConBox img {
-    width: 65%;
+    width: 85%;
 }
 
 .sub_modal > .inner .slideWrap .slideList .slideConBox .conNum {
@@ -206,18 +198,27 @@
     margin-top: 15px;
 }
 
-/* 가이드안 go 글자 */
 .sub_modal .subBoxText .go {
     width: 75px;
-    height: 70px;
+    height: auto;
     margin-top: 30px;
-    font-size: 5em;
+    font-size: 2em;
     font-weight: 700;
     font-family: "ProximaNova";
     color: #fff;
     position: relative;
-    background-color: #7F60FF;
+}
 
+.sub_modal .subBoxText .go::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: url(../../imgs/main/go_btn.png) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
 }
 
 .serviceBox {
@@ -271,6 +272,7 @@
     height: 0;
 }
 
+/* 서비스 오픈후 클릭하였을때 나오는 스크린 Back 버튼 상자 */
 .modal_box .close,
 .modalBox .close {
     font-size: 20px;
@@ -278,8 +280,7 @@
     font-family: "ProximaNova";
     font-weight: 700;
     padding-right: 40px;
-    background: url(../../imgs/common/closeBtn.png) right 0 center no-repeat;
-    background-size: 30px;
+    background: url(/Front/img/close.png) right 0 center no-repeat;
     display: block;
     position: absolute;
     top: 50px;
@@ -289,12 +290,12 @@
 
 .modal_box .close:hover,
 .modalBox .close:hover {
-    background: url(../../imgs/common/closeBtn_on.png) right 0 center no-repeat;
+    background: url(/Front/img/closecolor.png) right 0 center no-repeat;
     color: #7F60FF;
 }
 
 .serviceBox .subTitle {
-    font-size: 4em;
+    font-size: 2.8em;
     font-family: "ProximaNova";
     color: #fff;
     font-weight: 700;
@@ -343,34 +344,11 @@
     margin: auto;
 }
 
-.sub_modal .sPage {
-    position: absolute;
-    left: 50%;
-    bottom: 70px;
-    transform: translate(-50%, 0);
-    width: 50%;
-    z-index: 99;
-}
 
-/* 가이드 안 버튼 뒤에 선 */
-.sub_modal .sPage::after {
-    content: "";
-    display: block;
-    width: 98%;
-    height: 1px;
-    background: rgba(244, 244, 244, 0.2);
-    position: absolute;
-    left: 50%;
-    top: 3px;
-    transform: translate(-50%, 0);
-    z-index: -2;
-}
 
-/* 가이드안 버튼 위치 */
 .sub_modal .sPage .swiper-pagination-bullet {
     float: left;
-/* 가이드안 버튼 간격 */
-    margin-right: calc(25% - 60px);
+    margin-right: calc(25% - 15px);
     position: relative;
     display: block;
     cursor: pointer;
@@ -393,7 +371,7 @@
 
 .sub_modal .sPage .swiper-pagination-bullet:last-child {
     margin-right: 0;
-} 
+}
 
 .sub_modal .sPage .swiper-pagination-bullet::after {
     content: "";
@@ -421,7 +399,6 @@
     border-radius: 50%;
 }
 
-/* 가이드안 움직이는 슬라이더 동그라미 */
 .sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     content: "";
     display: block;
@@ -438,37 +415,32 @@
     z-index: -1;
 }
 
-/* 카테고리 가이드안 움직이는 슬라이더 이름 */
 .sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     color: #7F60FF;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:first-child::after {
-    content: "카테고리 가이드";
+    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
     bottom: -43px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "태린이 벽돌두개";
+    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "태린이는 줄담꾼";
+    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(4)::after {
-    content: "태린이 이상해";
+    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(5)::after {
-    content: "태린이는 리액트잘해요";
-    font-size: 12px;
-}
-.sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(6)::after {
-    content: "태린이는 바보에요";
+    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
     font-size: 12px;
 }
 
@@ -544,84 +516,6 @@
 
 
 
-
-
-/*.sub_modal .slick-dots li button {
-    background: none;
-    border: none;
-    outline: none;
-    width: 34px;
-    height: 34px;
-    font-size: 0px;
-    cursor: pointer;
-    position: relative;
-    z-index: 99;
-}
-
-
-
-.sub_modal .slick-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translate(-50%, 0);
-}
-
-.sub_modal .slick-dots li {
-    float: left;
-    margin-right: 8.3vw;
-    position: relative;
-    display: block;
-    cursor: pointer;
-}
-
-.sub_modal .slick-dots li:last-child {
-    margin-right: 0;
-}
-
-.sub_modal .slick-dots li::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -30px;
-    transform: translate(-50%, 0);
-    color: #757575;
-    display: block;
-    width: 130px;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: 400;
-}*/
-
-/*.sub_modal .slick-dots li.slick-active::after {
-    color: #7F60FF;
-    font-weight: 700;
-}
-
-.mainBox2_modal .slick-dots li:first-child::after {
-    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
-    bottom: -33px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(2)::after {
-    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
-    font-size: 12px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(3)::after {
-    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
-    font-size: 12px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(4)::after {
-    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
-    font-size: 12px;
-}
-
-.mainBox2_modal .slick-dots li:nth-child(5)::after {
-    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
-    font-size: 12px;
-}*/
 
 .sub_modal .slick-dots li button {
     background: none;
