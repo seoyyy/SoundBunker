@@ -6,17 +6,19 @@ html{
     background-size: cover;
 }
 div.name{
+    position: absolute;
+    top: 30%;
+    left: 20%;
     font-family: 'BRBA_B';
     font-size: 180px;
     font-style: italic;
     color: whitesmoke;
-    transform: translate(150px, 250px);
 }
 ul.music {
     position: absolute;
     width: 180px;
     height: 44px;
-    top: 10%;
+    top: 0%;
     right: 0;
     bottom: 0;
     left: 0;

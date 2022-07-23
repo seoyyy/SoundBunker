@@ -37,7 +37,7 @@
                     <input type="submit" value="로그인" class="btn solid">
                     <div class="social-media">
                         <p class="social-text">카카오톡으로 계속하시겠습니까?</p>
-                        <a href="title.html" class="social-icon">
+                        <a href="#" class="social-icon" onclick="kakaoLogin()">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -57,13 +57,7 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="패스워드" />
                     </div>
-                    <input type="submit" class="btn" value="회원가입" onclick>
-                    <div class="social-media">
-                        <p class="social-text">카카오톡으로 계속하시겠습니까?</p>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
+                    <input type="submit" class="btn" value="회원가입">
                 </form>
             </div>
         </div>
@@ -94,6 +88,7 @@
         </div>
     </div>
 </body>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script src="login.js"></script>
-
+<script src="kakao.js"></script>
 </html>
