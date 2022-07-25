@@ -449,26 +449,26 @@
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "태린이 벽돌두개";
+    content: "카테고리 버튼클릭";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "태린이는 줄담꾼";
+    content: "룸화면 생성";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(4)::after {
-    content: "태린이 이상해";
+    content: "필요한 아이콘 클릭";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(5)::after {
-    content: "태린이는 리액트잘해요";
+    content: "YES OR NO";
     font-size: 12px;
 }
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(6)::after {
-    content: "태린이는 바보에요";
+    content: "카테고리로 이동";
     font-size: 12px;
 }
 

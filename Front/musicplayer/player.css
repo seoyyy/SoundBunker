@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root {
+    --pink: turquoise;
+    --violet: violet;
+    --white: #fff;
+    --lightshadow: rgba(0, 0, 0, 0.15);
+    --lightblack: #515c6f;
+    --pinkshadow: #ffcbdd;
+    --darkwhite: #cecaca;
+}
+
+.wrap__music {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    user-select: none;
+}
+.music__inner {
+    width: 330px;
+    padding: 25px 30px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    background: var(--white);
+    box-shadow: 0 6px 15px var(--lightshadow);
+    margin-top: 515px;
+}
+
+.music__progress {
+    height: 6px;
+    width: 100%;
+    border-radius: 10px;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.music__progress .bar {
+    height: inherit;
+    width: 0%;
+    position: relative;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+}
+
+.music__progress .timer {
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--lightblack);
+    font-size: 0.9em;
+    pointer-events: none;
+}
+
+.music__control {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music__control i {
+    font-size: 28px;
+    user-select: none;
+    background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.music__control i:nth-child(2),
+.music__control i:nth-child(4) {
+    font-size: 40px;
+}
+
+.music__control .play-pause {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
+    box-shadow: 0 0 0 2px var(--pink);
+    z-index: 1;
+}
+
+.music__control .play-pause::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: inherit;
+    background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+    z-index: -1;
+}
+
+.music__control .play-pause #control-play {
+    -webkit-text-fill-color: var(--white);
+    opacity: 0.8;
+}
