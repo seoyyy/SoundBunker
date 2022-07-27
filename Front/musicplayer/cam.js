@@ -61,12 +61,3 @@ $(document).keydown(function(event) {
     }
 });
 
-
-
-
-// ESC 전체화면 아이콘 생성
-// $(document).keydown(function(event) {
-//     if ( event.keyCode == 27 || event.which == 27 ) {
-//         $('.fullscreen').show();
-//     }
-// })

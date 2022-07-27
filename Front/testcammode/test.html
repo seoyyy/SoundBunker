@@ -42,15 +42,22 @@
         // 2.5초 사진찍기
         setInterval(() => {
             console.log('snap test')
-            $(snap).trigger('click')
+            $(snap).trigger('dblclick')
             // 저장
-            $("#save").get(0).click();
+            // $("#save").get(0).click();
         }, 2500);
-
+        
+        let arr = []
         function downFile(down) {
-            $(down).attr('href', 'Front/scanimg');
-            $(down).attr('download', 'img.jpg');
+            data = {
+                "name" : "2022-07-27",
+                "img" : canvas.toDataURL('image/*')
+            }
+            arr.push(data);
             
+            console.log(JSON.stringify(arr))
+            $(down).attr('href', '');
+            $(down).attr('download', 'img.jpg');
         }
         function cameraonoff() {
             if (!isPlaying) {
