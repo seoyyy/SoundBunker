@@ -29,6 +29,7 @@ function exitFullScreenMode() {
 
 //  스페이스바 음악 일시정지 및 재생 
 let a = 0;
+let playmusic = document.querySelector("#main > div.wrap__music > div > div.music__control > div");
 $(document).keydown(function(event) {
     if ( event.keyCode == 32 || event.which == 32 ) {
         // 창모드 일시정지
@@ -38,16 +39,30 @@ $(document).keydown(function(event) {
             exitFullScreenMode()
             // 전체화면 생성
             $('.fullscreen').show();
+            document.querySelector("#main > div.wrap__music > div > div.music__song").style.visibility = "unset";
+            musicWrap.classList.remove("paused");
+        musicPlay.innerText = "play_arrow";
+        musicPlay.setAttribute("title", "재생")
+        musicAudio.pause();
+            
         }
         // 풀스크린 재생
         else if (a == 1){
             $("li[id^='bar']").css("animation-play-state", "running");
             a = 0 
+            document.querySelector("#main > div.wrap__music > div > div.music__song").style.visibility = "hidden";
             openFullScreenMode()
+            musicWrap.classList.add("paused");
+        musicPlay.innerText = "pause";
+        musicPlay.setAttribute("title", "일시정지")
+        musicAudio.play();
         }
 
     }
 });
+
+
+
 
 // ESC 전체화면 아이콘 생성
 // $(document).keydown(function(event) {
