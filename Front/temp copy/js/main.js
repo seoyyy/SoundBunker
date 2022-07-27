@@ -95,6 +95,15 @@ $(document).ready(function () {
             $('#mainBoxText1').css({ "left": "0%" })
             $('#room_slide').css({ "left": "-120%", "cursor": "initial" });
 
+            const target = document.getElementById('alert');
+            target.classList.remove("effect");
+            document.getElementById('question_1').innerHTML = "";
+            document.getElementById('question_2').innerHTML = "";
+            document.getElementById('yes').innerHTML = "";
+            document.getElementById('no').innerHTML = "";
+
+            $('category').css({"background-color" : "rebeccapurple"});
+
         }
         if ($(document).scrollTop() > section3.top - 200) {
             $('.nav ul li').removeClass('on');
@@ -102,6 +111,9 @@ $(document).ready(function () {
             $('.scrollDown').css('display', 'block')
             // $('.copyright').css('display', 'block')
             // $('.credit').css('display', 'none')
+
+            $('#more_marketing').css({ "right": "0%" })
+            $('#mainBoxText2').css({ "left": "0%" })
         }
         if ($(document).scrollTop() > section4.top - 200) {
             $('.nav ul li').removeClass('on');
@@ -174,6 +186,8 @@ $(document).ready(function () {
         $('#mainBoxText1').css({ "left": "580%" })
         $('#room_slide').css({ "left": "15%", "cursor": "pointer" });
         $('#siri_ment1').css({ "animation": "fadein 5s", "-webkit-animation": "fadein 5s" });
+        $('#category').css({"background" : "url(https://www.oz-z.com/imgs/main/modal_bg2.png) 0 0 no-repeat", "background-size" : "cover"});
+        
     })
 
     // 시작하기 눌렀을 때 기존 글씨 none & siri 발생
@@ -185,7 +199,7 @@ $(document).ready(function () {
     // 시리 누르면 room 발생
     $('#room_slide').click(function () {
         $('#recursionPuzzleModal').css({
-            "left": "-70%", "transition-property": "left",
+            "left": "-19%", "transition-property": "left",
             "transition-duration": "1s"
         });
         $('#siri_ment1').css({ "display": "none" });
@@ -210,17 +224,25 @@ $(document).ready(function () {
         $('#category').css({ "background-color": "black" });
         document.getElementById('alert').style.display = "block";
 
+        const target = document.getElementById('alert');
+        document.getElementById('question_1').innerHTML = "원하시는 아이콘을 클릭해 주세요";
+        target.classList.remove("effect2");
+        void target.offsetWidth; 
+        target.classList.add("effect2");
+
     })
 
     // 덤벨 눌렀을 때 alert 발생
-    $('#book').click(function () {
+    $('#dumbbell').click(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "운동 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
-        
-        target.classList.remove("effect"),
+        document.getElementById('yes').innerHTML = "예";
+        document.getElementById('no').innerHTML = "아니오";
+        target.classList.remove("effect2");
+        target.classList.remove("effect");
         void target.offsetWidth; 
-        target.classList.add("effect")      
+        target.classList.add("effect");    
     })
 
 
@@ -229,10 +251,12 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
-        
-        target.classList.remove("effect"),
+        document.getElementById('yes').innerHTML = "예";
+        document.getElementById('no').innerHTML = "아니오";
+        target.classList.remove("effect2");
+        target.classList.remove("effect");
         void target.offsetWidth; 
-        target.classList.add("effect")      
+        target.classList.add("effect");   
     })
 
 
@@ -241,10 +265,12 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
-        
-        target.classList.remove("effect"),
+        document.getElementById('yes').innerHTML = "예";
+        document.getElementById('no').innerHTML = "아니오";
+        target.classList.remove("effect2");
+        target.classList.remove("effect");
         void target.offsetWidth; 
-        target.classList.add("effect")      
+        target.classList.add("effect");
     })
 
     // 소파 눌렀을 때 alert 발생
@@ -252,10 +278,12 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "휴식 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
-        
-        target.classList.remove("effect"),
+        document.getElementById('yes').innerHTML = "예";
+        document.getElementById('no').innerHTML = "아니오";
+        target.classList.remove("effect2");
+        target.classList.remove("effect");
         void target.offsetWidth; 
-        target.classList.add("effect")      
+        target.classList.add("effect"); 
     })
 
     // 태블릿 눌렀을 때 alert 발생
@@ -263,15 +291,26 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "재택근무 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
-        
-        target.classList.remove("effect"),
+        document.getElementById('yes').innerHTML = "예";
+        document.getElementById('no').innerHTML = "아니오";
+        target.classList.remove("effect2");
+        target.classList.remove("effect");
         void target.offsetWidth; 
-        target.classList.add("effect")      
+        target.classList.add("effect");  
     })
 
     // 아니오 눌렀을 때 alert 끄기
     $('#no').click(function () {
-        document.getElementById('alert').style.display = "none";
+        const target = document.getElementById('alert');
+        target.classList.remove("effect");
+        target.classList.remove("effect2");
+        void target.offsetWidth; 
+        
+        document.getElementById('question_1').innerHTML = "원하시는 아이콘을 클릭해 주세요";
+        document.getElementById('question_2').innerHTML = "";
+        document.getElementById('yes').innerHTML = "";
+        document.getElementById('no').innerHTML = "";
+        target.classList.add("effect2");
     })
 
 

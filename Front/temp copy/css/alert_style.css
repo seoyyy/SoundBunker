@@ -7,10 +7,10 @@
   display: grid;
   /* position: fixed; */
   z-index: 1;
-  left: -24%;
-  top: -61%;
-  width: 126%;
-    height: 186%;
+  left: 25%;
+  top: 11%;
+  width: 28%;
+  height: 45%;
   overflow: auto;
   /* background-color: black; */
   /* background-color: rgba(0, 0, 0, 0.4); */
@@ -31,29 +31,45 @@ div#alert {
   height: 83%;
   top: 118%;
   color: white;
-  background-color: black;
+  background-color: transparent;
   font-size: 30px;
 }
 /* 알림창 페이드인 */
 #alert.effect {
   position: relative;
-  left: -51.5%;
+  left: -51%;
   width: 15%;
   height: 83%;
   top: 118%;
   color: white;
-  background-color: black;
+  background-color: transparent;
   font-size: 30px;
   animation: fadein 3s;
   -webkit-animation: fadein 3s;
   display: block;
 }
+/* 시리 클릭했을 때 나오는 알림 멘트 */
+#alert.effect2 {
+  position: relative;
+  left: -51%;
+  width: 15%;
+  height: 83%;
+  top: 130%;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+  animation-delay: 10s;
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  display: block;
+}
+
 #question_1 {
   width: 29.4em;
   font-family: "Courier";
   font-size: 14px;
   top: 7%;
-  left: -37%;
+  left: -36%;
   color: white;
   text-align: center;
   font-size: 25px;
@@ -143,16 +159,14 @@ div#alert {
   display: none;
 }
 
-  #siri_ment1 {
-    position: relative;
-    top: 60%;
-    left: 18%;
-    color: wheat;
-    /* width: 42%; */
-    font-size: 30px;
-  /*-moz-animation: fadein 3s;*/ /* Firefox */
-  /*-webkit-animation: fadein 3s; /* Safari and Chrome */
-  /*-o-animation: fadein 3s; /* Opera */
+#siri_ment1 {
+  position: relative;
+  top: 60%;
+  left: 28.5%;
+  color: white;
+  /* width: 42%; */
+  font-size: 30px;
+  /* -moz-animation: fadein 3s; */
 }
 @keyframes fadein {
   from {

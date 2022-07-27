@@ -40,7 +40,9 @@ img#room {
     transition-duration: 1.2s;
     background-color: inherit;
     z-index: 30;
-  }
+    box-shadow: 30px black;
+    filter: drop-shadow(9px 74px 11px #000);
+}
 
 img#dumbbell {
     width: 2%;
