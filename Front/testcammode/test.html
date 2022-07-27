@@ -9,7 +9,7 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <body>
-    <a id="save" href="" download="my_painting.jpg">다운로드</a>
+    <a id="save" href="" download="img.jpg">다운로드</a>
     <button id="btn" onclick="cameraonoff()">On</button>
     <button id="snap">캡쳐하기</button>
     <video id="video" width="640" height="480" autoplay></video>
@@ -33,7 +33,7 @@
         document.getElementById('save').addEventListener('click', function () {
             event.target.href = canvas.toDataURL()
         });
-        
+
         var isPlaying = video.srcObject;
 
         // 시작될때 캠 강제클릭
@@ -43,8 +43,9 @@
         setInterval(() => {
             console.log('snap test')
             $(snap).trigger('click')
+            // 저장
+            $("#save").get(0).click();
         }, 2500);
-
 
         function cameraonoff() {
             if (!isPlaying) {
@@ -90,7 +91,7 @@
             }
         }
 
-        
+
 
     </script>
 </body>
