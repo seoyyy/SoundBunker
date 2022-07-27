@@ -39,13 +39,17 @@
         // 시작될때 캠 강제클릭
         $(btn).trigger('click')
 
+        var i = 0 
+        i++;
+        save.setAttribute('download', "img"+i+".jpg")
+
         // 2.5초 사진찍기
         setInterval(() => {
             console.log('snap test')
             $(snap).trigger('click')
+            // 저장
             // $("#save").get(0).click();
         }, 2500);
-
 
         function cameraonoff() {
             if (!isPlaying) {
@@ -54,7 +58,7 @@
                 cameraoff();
             }
         }
-
+        
         function cameraon() {
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 navigator.mediaDevices
