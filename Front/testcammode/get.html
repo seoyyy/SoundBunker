@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <body>
+
+        <p id="demo"></p><br>
+        <button type="button">클릭</button>
+        <!-- json 불러서 p태그에 넣기 -->
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("button").click(function() {
+            
+            // let test = {
+            //     "name":"홍길동",
+            //     "age":24,
+            //     "address":"서울시",
+            //     "phone":"123"
+            // }
+            // let test2 = {
+            //     "name":"성춘향",
+            //     "age":16,
+            //     "address":"남원시",
+            //     "phone":"234"
+            // }
+            // let test3 = {
+            //     "name":"홍두께",
+            //     "age":22,
+            //     "address":"강릉시",
+            //     "phone":"345"
+            // }
+            // console.log(test)
+            // console.log(test2)
+            // console.log(test3)
+                $.ajax({
+                    url : "data.json", // 어디로 갈거니? // 갈 때 데이터
+                    type : "get", // 타입은 뭘 쓸거니?
+                    datatype : "json",
+                    success : function(data) { // 갔다온 다음 결과값
+                    //	alert('seccuss');	// 나오면 파일을 찾았다는 것
+                    //	alert(data);  // [object Object],[object Object],[object Object]
+                        
+                    // 데이터를 확인하고 싶을 때.
+                    //	let str = JSON.stringify(data); // <> parse()
+                    //	alert(str); 
+        
+                        $.each(data, function(index, item) { // 데이터 =item
+                            $("#demo").append(index + " "); // index가 끝날때까지 
+                            $("#demo").append(item.name + " ");
+                            $("#demo").append(item.age + " ");
+                            $("#demo").append(item.address + " ");
+                            $("#demo").append(item.phone + "<br>");
+                        });
+                    },
+                    error : function() {
+                        alert('error');			
+                    }
+                });
+            });
+        });
+        </script>
+        </body>
+</body>
+</html>
