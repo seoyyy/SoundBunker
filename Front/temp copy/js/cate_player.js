@@ -232,8 +232,4 @@
         
         window.addEventListener("load", () => {
             loadMusic(musicIndex);
-            musicWrap.classList.add("paused");
-            musicPlay.innerText = "pause";
-            musicPlay.setAttribute("title", "일시정지")
-            musicAudio.play();
         });

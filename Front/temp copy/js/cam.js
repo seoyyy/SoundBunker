@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Video stream Sandbox</title>
-    <meta charset="UTF-8" />
-</head>
-<script src="/jquery-3.6.0.js"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
-<body>
-    <a id="save" href="" onclick="downFile(this)">다운로드</a>
-    <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
-    <button id="snap" style="display: none;">캡쳐하기</button>
-    <video id="video" width="640" height="480" autoplay></video>
-    <canvas id="canvas" width="640" height="480"></canvas>
-
-    <script>
-        var video = document.getElementById("video");
+var video = document.getElementById("video");
         var btn = document.getElementById("btn");
         var snap = document.getElementById("snap");
         var save = document.getElementById("save");
@@ -42,22 +24,15 @@
         // 2.5초 사진찍기
         setInterval(() => {
             console.log('snap test')
-            $(snap).trigger('dblclick')
+            $(snap).trigger('click')
             // 저장
-            // $("#save").get(0).click();
+            $("#save").get(0).click();
         }, 2500);
-        
-        let arr = []
+
         function downFile(down) {
-            data = {
-                "name" : "2022-07-27",
-                "img" : canvas.toDataURL('image/*')
-            }
-            arr.push(data);
-            
-            console.log(JSON.stringify(arr))
-            $(down).attr('href', '');
+            $(down).attr('href', 'Front/scanimg');
             $(down).attr('download', 'img.jpg');
+            
         }
         function cameraonoff() {
             if (!isPlaying) {
@@ -102,10 +77,3 @@
                 btn.innerText = "On";
             }
         }
-
-
-
-    </script>
-</body>
-
-</html>

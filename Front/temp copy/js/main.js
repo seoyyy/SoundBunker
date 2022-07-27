@@ -82,18 +82,17 @@ $(document).ready(function () {
 
             $('#expand').show();
             $('#mainBoxText1').show();
-            $('#room').css({
-                "position": "absolute", "bottom": "-400%",
-                "transition-property": "bottom", "transition-duration": "0.7s"
-            });
-            $('#dumbbell').css({ "position": "absolute", "bottom": "-400%" });
-            $('#cleaner').css({ "position": "absolute", "bottom": "-400%" });
-            $('#book').css({ "position": "absolute", "bottom": "-400%" });
+            $('#room').css({"position": "absolute", "left": "70%"});
+            $('#dumbbell').css({ "position": "relative", "left": "70%" });
+            $('#cleaner').css({ "position": "relative", "left": "70%" });
+            $('#book').css({ "position": "relative", "left": "70%" });
 
-
+           
             $('#more_distribution').css({ "right": "0%" })
             $('#mainBoxText1').css({ "left": "0%" })
             $('#room_slide').css({ "left": "-120%", "cursor": "initial" });
+
+            $('siri_ment1').css({"display":"block"});
 
             const target = document.getElementById('alert');
             target.classList.remove("effect");
@@ -101,8 +100,23 @@ $(document).ready(function () {
             document.getElementById('question_2').innerHTML = "";
             document.getElementById('yes').innerHTML = "";
             document.getElementById('no').innerHTML = "";
+            document.getElementById('alert').style.display = "none";
+            musicWrap.classList.remove("paused");
+            musicPlay.innerText = "play_arrow";
+            musicPlay.setAttribute("title", "재생")
+            musicAudio.pause();
 
-            $('category').css({"background-color" : "rebeccapurple"});
+            $('#category').css({"background" : "initial"});
+            $('#category').css({"background-color" : "rebeccapurple"});
+
+            $('#cate_player').css({"display" : "none"})
+
+            document.getElementById('playing').innerHTML = "";
+
+            $('#recursionPuzzleModal').css({
+                "left": "25%"
+            });
+            
 
         }
         if ($(document).scrollTop() > section3.top - 200) {
@@ -185,16 +199,21 @@ $(document).ready(function () {
         $('#more_distribution').css({ "right": "-580%" })
         $('#mainBoxText1').css({ "left": "580%" })
         $('#room_slide').css({ "left": "15%", "cursor": "pointer" });
-        $('#siri_ment1').css({ "animation": "fadein 5s", "-webkit-animation": "fadein 5s" });
         $('#category').css({"background" : "url(https://www.oz-z.com/imgs/main/modal_bg2.png) 0 0 no-repeat", "background-size" : "cover"});
+        $('#siri_ment1').css({"display":"block"});
         
     })
+
+    
 
     // 시작하기 눌렀을 때 기존 글씨 none & siri 발생
     $('#subText2').click(function () {
         $('#more_marketing').css({ "right": "-580%" })
         $('#mainBoxText2').css({ "left": "580%" })
     })
+
+
+
 
     // 시리 누르면 room 발생
     $('#room_slide').click(function () {
@@ -203,7 +222,6 @@ $(document).ready(function () {
             "transition-duration": "1s"
         });
         $('#siri_ment1').css({ "display": "none" });
-        $('#imgSlide').css({ "display": "block" });
         $('#room_slide').css({ "cursor": "initial" });
         $('#room').css({
             "left": "18%", "transition-property": "left",
@@ -221,7 +239,6 @@ $(document).ready(function () {
             "left": "28.2%", "transition-property": "left",
             "transition-duration": "1s"
         });
-        $('#category').css({ "background-color": "black" });
         document.getElementById('alert').style.display = "block";
 
         const target = document.getElementById('alert');
@@ -234,6 +251,7 @@ $(document).ready(function () {
 
     // 덤벨 눌렀을 때 alert 발생
     $('#dumbbell').click(function () {
+        $('#cate_player').css({"display" : "none"})
         const target = document.getElementById('alert');
         // 멘트수정
         document.getElementById('question_1').innerHTML = "운동 관련 아이콘을 클릭하셨습니다";
@@ -247,15 +265,16 @@ $(document).ready(function () {
         void target.offsetWidth; 
         target.classList.add("effect");    
         $('#recursionPuzzleModal').css({
-            "top": "60%", "left": "-35%", "transition-property": "top, left",
+            "top": "11%", "transition-property": "top",
             "transition-duration": "1s",
-            "filter": "drop-shadow(-1px -1px 0px #fff)"
+            "filter": "initial"
         });
     })
 
 
     // 책 눌렀을 때 alert 발생
     $('#book').click(function () {
+        $('#cate_player').css({"display" : "none"})
         const target = document.getElementById('alert');
         // 멘트수정
         document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
@@ -268,11 +287,17 @@ $(document).ready(function () {
         target.classList.remove("effect");
         void target.offsetWidth; 
         target.classList.add("effect");   
+        $('#recursionPuzzleModal').css({
+            "top": "11%", "transition-property": "top",
+            "transition-duration": "1s",
+            "filter": "initial"
+        });
     })
 
 
     // 청소기 눌렀을 때 alert 발생
     $('#cleaner').click(function () {
+        $('#cate_player').css({"display" : "none"})
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
@@ -284,10 +309,16 @@ $(document).ready(function () {
         target.classList.remove("effect");
         void target.offsetWidth; 
         target.classList.add("effect");
+        $('#recursionPuzzleModal').css({
+            "top": "11%", "transition-property": "top",
+            "transition-duration": "1s",
+            "filter": "initial"
+        });
     })
 
     // 소파 눌렀을 때 alert 발생
     $('#rest').click(function () {
+        $('#cate_player').css({"display" : "none"})
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "휴식 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
@@ -299,11 +330,17 @@ $(document).ready(function () {
         target.classList.remove("effect2");
         target.classList.remove("effect");
         void target.offsetWidth; 
-        target.classList.add("effect"); 
+        target.classList.add("effect");
+        $('#recursionPuzzleModal').css({
+            "top": "11%", "transition-property": "top",
+            "transition-duration": "1s",
+            "filter": "initial"
+        }); 
     })
 
     // 태블릿 눌렀을 때 alert 발생
     $('#tablet').click(function () {
+        $('#cate_player').css({"display" : "none"})
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "재택근무 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
@@ -315,6 +352,11 @@ $(document).ready(function () {
         target.classList.remove("effect");
         void target.offsetWidth; 
         target.classList.add("effect");  
+        $('#recursionPuzzleModal').css({
+            "top": "11%", "transition-property": "top",
+            "transition-duration": "1s",
+            "filter": "initial"
+        });
     })
 
     // 아니오 눌렀을 때 alert 끄기
