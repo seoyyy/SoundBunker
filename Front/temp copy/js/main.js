@@ -5,7 +5,7 @@ $(document).ready(function () {
         $('.modalBg').addClass('on')
     })
 
-    
+
 
     //모달 닫기, 스크롤 사용 가능
     $('.modalClose').click(function () {
@@ -19,18 +19,18 @@ $(document).ready(function () {
     })
 
     // 서비스가이드 카테고리 버튼 -> 자세히 보기 눌렀을 때 모달로 넘어감
-    //$('.modalBtn_2').click(function () {
-    //    $('.modal_box').removeClass('on')
-    //    $('.modalBox').removeClass('on')
-    //    $('.mainBox2_modal').addClass('on')
-    //})
+    $('.modalBtn_2').click(function () {
+        $('.modal_box').removeClass('on')
+        $('.modalBox').removeClass('on')
+        $('.mainBox2_modal').addClass('on')
+    })
 
     // 서비스가이드 캠모드 버튼
-    // $('.modalBtn_3').click(function () {
-    //     $('.modal_box').removeClass('on')
-    //     $('.modalBox').removeClass('on')
-    //     $('.mainBox3_modal').addClass('on')
-    // })
+    $('.modalBtn_3').click(function () {
+        $('.modal_box').removeClass('on')
+        $('.modalBox').removeClass('on')
+        $('.mainBox3_modal').addClass('on')
+    })
 
     // 플레이리스트 팀 버튼
     $('.modalBtn_4').click(function () {
@@ -39,17 +39,20 @@ $(document).ready(function () {
         $('.modalBg').removeClass('on')
     })
 
+
+
     // 서비스가이드 팀 버튼
     $('.modalBtn_5').click(function () {
         $('.modalBox').removeClass('on')
         $('.modal_box').removeClass('on')
         $('.modalBg').removeClass('on')
-        // $('.modalBg').off('scroll touchmove mousewheel');
+    })
 
-        // $('.modal_box').removeClass('on')
-        // $('.modalBox').removeClass('on')
-        // $('.mainBox5_modal').addClass('on')
-        // $('.mainBox6_modal').addClass('on')
+    // Guide 안 GO 버튼
+    $('.catego').click(function () {
+        $('.modalBox').removeClass('on')
+        $('.modal_box').removeClass('on')
+        $('.modalBg').removeClass('on')
     })
 
     //화면별 메뉴 선택표시 추가
@@ -61,7 +64,7 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(document).scrollTop() > section.top - 200) {
-            
+
             // $('.copyright').css('display', 'none')
             // $('.credit').css('display', 'block')
         }
@@ -70,7 +73,7 @@ $(document).ready(function () {
             $('.nav .category').addClass('on')
             // $('.copyright').css('display', 'block')
             // $('.credit').css('display', 'none')
-            
+
         }
         // category mode ~
         if ($(document).scrollTop() > section2.top - 200) {
@@ -79,16 +82,18 @@ $(document).ready(function () {
 
             $('#expand').show();
             $('#mainBoxText1').show();
-            $('#room').css({"position": "absolute", "bottom": "-400%",
-            "transition-property": "bottom", "transition-duration": "0.7s"});
-            $('#dumbbell').css({"position": "absolute", "bottom": "-400%"});
-            $('#cleaner').css({"position": "absolute", "bottom": "-400%"});
-            $('#book').css({"position": "absolute", "bottom": "-400%"});
+            $('#room').css({
+                "position": "absolute", "bottom": "-400%",
+                "transition-property": "bottom", "transition-duration": "0.7s"
+            });
+            $('#dumbbell').css({ "position": "absolute", "bottom": "-400%" });
+            $('#cleaner').css({ "position": "absolute", "bottom": "-400%" });
+            $('#book').css({ "position": "absolute", "bottom": "-400%" });
 
 
-            $('#more_distribution').css({"right": "0%"})
-            $('#mainBoxText1').css({"left": "0%"})
-            $('#room_slide').css({"left": "-120%", "cursor": "initial"});  
+            $('#more_distribution').css({ "right": "0%" })
+            $('#mainBoxText1').css({ "left": "0%" })
+            $('#room_slide').css({ "left": "-120%", "cursor": "initial" });
 
         }
         if ($(document).scrollTop() > section3.top - 200) {
@@ -118,7 +123,7 @@ $(document).ready(function () {
 
 
     // 서비스 메뉴 온 오프
-    $('.callNav').click(function(){
+    $('.callNav').click(function () {
         $('.modalBg').addClass('on')
         $('.serviceBox').addClass('on')
     })
@@ -138,69 +143,135 @@ $(document).ready(function () {
         $('.serviceBox').removeClass('on')
     })
 
+    //  play List 클릭시 Play list main 으로 이동
+    function move_category() {
+        var element = document.getElementById("category");
+        element.scrollIntoView();
+    }
+
+    //  team 클릭시 team main 으로 이동
+    function move_cammode() {
+        var element = document.getElementById("cammode");
+        element.scrollIntoView();
+    }
+    function move_playlist() {
+        var element = document.getElementById("playlist");
+        element.scrollIntoView();
+    }
+
+    //  team 클릭시 team main 으로 이동
+    function move_team() {
+        var element = document.getElementById("team");
+        element.scrollIntoView();
+    }
+
+
+
+    //  상희 
     // 시작하기 눌렀을 때 기존 글씨 none & siri 발생
-    $('#subText1').click(function(){
-        $('#more_distribution').css({"right": "-580%"})
-        $('#mainBoxText1').css({"left": "580%"})
-        $('#room_slide').css({"left": "15%", "cursor": "pointer"});  
-        $('#siri_ment1').css({"animation": "fadein 5s", "-webkit-animation": "fadein 5s"});
+    $('#subText1').click(function () {
+        $('#more_distribution').css({ "right": "-580%" })
+        $('#mainBoxText1').css({ "left": "580%" })
+        $('#room_slide').css({ "left": "15%", "cursor": "pointer" });
+        $('#siri_ment1').css({ "animation": "fadein 5s", "-webkit-animation": "fadein 5s" });
     })
 
     // 시작하기 눌렀을 때 기존 글씨 none & siri 발생
-    $('#subText2').click(function(){
-        $('#more_marketing').css({"right": "-580%"})
-        $('#mainBoxText2').css({"left": "580%"})
+    $('#subText2').click(function () {
+        $('#more_marketing').css({ "right": "-580%" })
+        $('#mainBoxText2').css({ "left": "580%" })
     })
 
     // 시리 누르면 room 발생
-    $('#room_slide').click(function(){
-        $('#recursionPuzzleModal').css({"top": "-140%", "transition-property":"top", 
-        "transition-duration": "1s"});  
-        $('#siri_ment1').css({"display": "none"});
-        $('#imgSlide').css({"display": "block"});
-        $('#room_slide').css({"cursor": "initial"});
-        $('#room').css({"bottom": "-150%", "transition-property":"bottom", 
-        "transition-duration": "1s"});  
-        $('#dumbbell').css({"bottom": "-169%", "transition-property":"bottom", 
-        "transition-duration": "1s"});  
-        $('#cleaner').css({"bottom": "-145%", "transition-property":"bottom", 
-        "transition-duration": "1s"});  
-        $('#book').css({"bottom": "-162%", "transition-property":"bottom", 
-        "transition-duration": "1s"});  
-    })
+    $('#room_slide').click(function () {
+        $('#recursionPuzzleModal').css({
+            "left": "-70%", "transition-property": "left",
+            "transition-duration": "1s"
+        });
+        $('#siri_ment1').css({ "display": "none" });
+        $('#imgSlide').css({ "display": "block" });
+        $('#room_slide').css({ "cursor": "initial" });
+        $('#room').css({
+            "left": "18%", "transition-property": "left",
+            "transition-duration": "1s"
+        });
+        $('#dumbbell').css({
+            "left": "18.5%", "transition-property": "left",
+            "transition-duration": "1s"
+        });
+        $('#cleaner').css({
+            "left": "31%", "transition-property": "left",
+            "transition-duration": "1s"
+        });
+        $('#book').css({
+            "left": "28.2%", "transition-property": "left",
+            "transition-duration": "1s"
+        });
+        $('#category').css({ "background-color": "black" });
+        document.getElementById('alert').style.display = "block";
 
-    // 청소기 눌렀을 때 alert 발생
-    $('#cleaner').click(function(){
-        $('#mainBoxText1').hide();
-        document.getElementById('alert').style.display="block";      
     })
 
     // 덤벨 눌렀을 때 alert 발생
-    $('#dumbbell').click(function(){
-        $('#mainBoxText1').hide();
-        document.getElementById('alert').style.display="none";
-        document.getElementById('question1').innerHTML = "운동 관련 플레이리스트를";
-        document.getElementById('alert').style.display="block";      
+    $('#book').click(function () {
+        const target = document.getElementById('alert');
+        document.getElementById('question_1').innerHTML = "운동 관련 아이콘을 클릭하셨습니다";
+        document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        
+        target.classList.remove("effect"),
+        void target.offsetWidth; 
+        target.classList.add("effect")      
     })
+
 
     // 책 눌렀을 때 alert 발생
-    $('#book').click(function(){
-        $('#mainBoxText1').hide();
-        document.getElementById('question1').innerHTML = "독서 관련 플레이리스트를";
-        document.getElementById('alert').style.display="block";      
+    $('#book').click(function () {
+        const target = document.getElementById('alert');
+        document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
+        document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        
+        target.classList.remove("effect"),
+        void target.offsetWidth; 
+        target.classList.add("effect")      
     })
 
-     // 청소기 눌렀을 때 alert 발생
-     $('#cleaner').click(function(){
-        $('#mainBoxText1').hide();
-        document.getElementById('alert').style.display="none";
-        document.getElementById('question1').innerHTML = "집안일 관련 플레이리스트를";
-        document.getElementById('alert').style.display="block";      
+
+    // 청소기 눌렀을 때 alert 발생
+    $('#cleaner').click(function () {
+        const target = document.getElementById('alert');
+        document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
+        document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        
+        target.classList.remove("effect"),
+        void target.offsetWidth; 
+        target.classList.add("effect")      
+    })
+
+    // 소파 눌렀을 때 alert 발생
+    $('#rest').click(function () {
+        const target = document.getElementById('alert');
+        document.getElementById('question_1').innerHTML = "휴식 관련 아이콘을 클릭하셨습니다";
+        document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        
+        target.classList.remove("effect"),
+        void target.offsetWidth; 
+        target.classList.add("effect")      
+    })
+
+    // 태블릿 눌렀을 때 alert 발생
+    $('#tablet').click(function () {
+        const target = document.getElementById('alert');
+        document.getElementById('question_1').innerHTML = "재택근무 관련 아이콘을 클릭하셨습니다";
+        document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        
+        target.classList.remove("effect"),
+        void target.offsetWidth; 
+        target.classList.add("effect")      
     })
 
     // 아니오 눌렀을 때 alert 끄기
-    $('#no').click(function(){
-        document.getElementById('alert').style.display="none";      
+    $('#no').click(function () {
+        document.getElementById('alert').style.display = "none";
     })
 
 
@@ -219,13 +290,13 @@ $(document).ready(function () {
 });
 
 //  play List 클릭시 Play list main 으로 이동
-function move_playlist(){
+function move_playlist() {
     var element = document.getElementById("playlist");
     element.scrollIntoView();
 }
 
 //  team 클릭시 team main 으로 이동
-function move_team(){
+function move_team() {
     var element = document.getElementById("team");
     element.scrollIntoView();
 }

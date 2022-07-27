@@ -1,20 +1,61 @@
-// JavaScript Document
-
-var i = 0; // 사진 인덱스를 저장할 변수
-$(".pre").click(function() { // img 크기만큼 왼쪽으로 이동
-  if (i > 0) {
-    i = i - 1;
-    $(".imgSlide").stop().animate({
-      "left": -800 * i + "px"
-    }, "slow");
-  }
-});
-$(".next").click(function() { // img 크기만큼 오른쪽으로 이동
-  if (i < 2) {
-    i = i + 1;
-    $(".imgSlide").stop().animate({
-      "left": -800 * i + "px"
-    }, "slow");
-  }
-
-});
+$(document).ready(function () {
+    var swiper2 = new Swiper('.swiper-container2', {
+        slidesPerView: 1.4,
+        spaceBetween: 100,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination2',
+            clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    
+    var swiper3 = new Swiper('.swiper-container3', {
+        slidesPerView: 1.4,
+        spaceBetween: 100,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination3',
+            clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    
+    var swiper4 = new Swiper('.swiper-container4', {
+        slidesPerView: 1.4,
+        spaceBetween: 100,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination4',
+            clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    
+    var swiper5 = new Swiper('.swiper-container5', {
+        slidesPerView: 1.4,
+        spaceBetween: 100,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination5',
+            clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    
+    var swiper6 = new Swiper('.swiper-container6', {
+        slidesPerView: 1.4,
+        spaceBetween: 100,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination6',
+            clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+})

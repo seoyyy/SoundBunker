@@ -21,14 +21,6 @@ a {
     opacity: 0;
 }
 
-img#room {
-  position: absolute;
-  width: 26%;
-  left: 5%;
-  bottom: -400%;
-  transition-property: bottom;
-  transition-duration: 1.2s;
-}
 
 #room_slide {
     width: 93%;

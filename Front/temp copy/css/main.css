@@ -30,45 +30,50 @@ div#room_section {
     width: 1%;
     top: 5%;
 }
+
 img#room {
+    position: absolute;
+    width: 26%;
+    left: 70%;
+    bottom: -148%;
+    transition-property: bottom;
+    transition-duration: 1.2s;
     background-color: inherit;
-}
+    z-index: 30;
+  }
+
 img#dumbbell {
     width: 2%;
-    z-index: 30;
+    z-index: 50;
     position: relative;
-    left: 5.5%;
-    
-    /* top: 104%; */
-    cursor: pointer;
+    left: 70%;
     transition-property: width, left, top;
     transition-duration: 0.7s;
-    bottom: -400%;
+    bottom: -168%;
+    cursor: pointer;
 }
 img#cleaner {
     width: 2.5%;
     z-index: 30;
     position: relative;
-    left: 18%;
+    left: 70%;
     /* top: 146.3%; */
     
     cursor: pointer;
     transition-property: width, left, top;
     transition-duration: 0.7s;
-    bottom: -400%;
+    bottom: -143%;
 }
 
 img#book {
     width: 2.2%;
     z-index: 30;
     position: relative;
-    left: 15.2%;
-    /* top: 169%; */
-    
+    left: 70%;
     cursor: pointer;
     transition-property: width, left, top;
     transition-duration: 0.7s;
-    bottom: -400%;
+    bottom: -159%;
 }
 
 div#tablet {
@@ -76,8 +81,9 @@ div#tablet {
     bottom: -87%;
     width: 2.5%;
     height: 14%;
-    left: 17.5%;
+    left: 30.5%;
     cursor: pointer;
+    z-index: 50;
 }
 
 div#rest {
@@ -85,8 +91,9 @@ div#rest {
     bottom: -115%;
     width: 7.5%;
     height: 31%;
-    left: 20%;
+    left: 33%;
     cursor: pointer;
+    z-index: 50;
 }
 
 /* 자세히 보기 눌렀을 때 trainsition */

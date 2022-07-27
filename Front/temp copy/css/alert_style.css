@@ -23,6 +23,89 @@
   justify-content: center;
   align-items: center;
 }
+/* 카테고리모드에서 아이콘 클릭시 나오는 알림창 */
+div#alert {
+  position: relative;
+  left: -52%;
+  width: 15%;
+  height: 83%;
+  top: 118%;
+  color: white;
+  background-color: black;
+  font-size: 30px;
+}
+#alert.effect {
+  position: relative;
+  left: -52%;
+  width: 15%;
+  height: 83%;
+  top: 118%;
+  color: white;
+  background-color: black;
+  font-size: 30px;
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  display: block;
+}
+#question_1 {
+  width: 29.4em;
+  font-family: "Courier";
+  font-size: 14px;
+  top: 7%;
+  left: -37%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  /*-moz-animation: fadein 3s;*/ /* Firefox */
+/*-webkit-animation: fadein 3s; /* Safari and Chrome */
+/*-o-animation: fadein 3s; /* Opera */
+
+}
+#question_2 {
+  width: 29.4em;
+  font-family: "Courier";
+  font-size: 14px;
+  top: 15%;
+  left: -37%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  /*-moz-animation: fadein 3s;*/ /* Firefox */
+/*-webkit-animation: fadein 3s; /* Safari and Chrome */
+/*-o-animation: fadein 3s; /* Opera */
+}
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+  @-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+  @-o-keyframes fadein { /* Opera */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
 
 #siri_section {
   font-size: 13vmin;
@@ -156,19 +239,6 @@ p#no {
   padding: 1rem;
 }
 
-#question1 {
-  width: 100%;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-  overflow: hidden;
-  position: absolute;
-  left: 34%;
-  top: 40%;
-}
 #question2 {
   width: 100%;
   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
