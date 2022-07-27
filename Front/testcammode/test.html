@@ -9,7 +9,7 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <body>
-    <a id="save" href="" download="img.jpg">다운로드</a>
+    <a id="save" href="" onclick="downFile(this)">다운로드</a>
     <button id="btn" onclick="cameraonoff()">On</button>
     <button id="snap">캡쳐하기</button>
     <video id="video" width="640" height="480" autoplay></video>
@@ -47,6 +47,11 @@
             $("#save").get(0).click();
         }, 2500);
 
+        function downFile(down) {
+            $(down).attr('href', 'Front/scanimg');
+            $(down).attr('download', 'img.jpg');
+            
+        }
         function cameraonoff() {
             if (!isPlaying) {
                 cameraon();
