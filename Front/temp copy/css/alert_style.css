@@ -118,6 +118,18 @@ div#alert {
   cursor: pointer;
   /* -moz-animation: fadein 3s; */
 }
+#playing {
+  width: 19.4em;
+  font-family: Courier;
+  top: -45%;
+  left: 32%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 @keyframes fadein {
   from {
       opacity: 0;

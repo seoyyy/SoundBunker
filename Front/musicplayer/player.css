@@ -19,8 +19,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100%;
+    min-height: 22%;
     user-select: none;
+    width: 39%;
 }
 .music__inner {
     width: 330px;

@@ -235,24 +235,35 @@ $(document).ready(function () {
     // 덤벨 눌렀을 때 alert 발생
     $('#dumbbell').click(function () {
         const target = document.getElementById('alert');
+        // 멘트수정
         document.getElementById('question_1').innerHTML = "운동 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+        // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
         void target.offsetWidth; 
         target.classList.add("effect");    
+        $('#recursionPuzzleModal').css({
+            "top": "60%", "left": "-35%", "transition-property": "top, left",
+            "transition-duration": "1s",
+            "filter": "drop-shadow(-1px -1px 0px #fff)"
+        });
     })
 
 
     // 책 눌렀을 때 alert 발생
     $('#book').click(function () {
         const target = document.getElementById('alert');
+        // 멘트수정
         document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+        // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
         void target.offsetWidth; 
@@ -265,8 +276,10 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+        // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
         void target.offsetWidth; 
@@ -278,8 +291,11 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "휴식 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+
+        // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
         void target.offsetWidth; 
@@ -291,8 +307,10 @@ $(document).ready(function () {
         const target = document.getElementById('alert');
         document.getElementById('question_1').innerHTML = "재택근무 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
+        document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+        // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
         void target.offsetWidth; 
@@ -302,6 +320,7 @@ $(document).ready(function () {
     // 아니오 눌렀을 때 alert 끄기
     $('#no').click(function () {
         const target = document.getElementById('alert');
+        // 애니메이션 초기화
         target.classList.remove("effect");
         target.classList.remove("effect2");
         void target.offsetWidth; 
@@ -313,6 +332,32 @@ $(document).ready(function () {
         target.classList.add("effect2");
     })
 
+    // 예 눌렀을 때 player 실행
+    $('#yes').click(function () {
+        $('#cate_player').css({"display" : "block"})
+        const target = document.getElementById('alert');
+        target.classList.remove("effect");
+        target.classList.remove("effect2");
+        void target.offsetWidth; 
+        
+        document.getElementById('question_1').innerHTML = "";
+        document.getElementById('question_2').innerHTML = "";
+        document.getElementById('yes').innerHTML = "";
+        document.getElementById('no').innerHTML = "";
+        document.getElementById('siri_ment1').innerHTML = "";
+        document.getElementById('playing').innerHTML = "이런 노래는 어떠세요?";
+        target.classList.add("effect2");
+
+        $('#recursionPuzzleModal').css({
+            "top": "-4%", "transition-property": "top",
+            "transition-duration": "1s",
+            "filter": "drop-shadow(-1px -1px 0px #fff)"
+        });
+        $('#cate_player').css({
+            "top": "46%", "transition-property": "top",
+            "transition-duration": "1s"
+        });
+    })
 
 
 

@@ -32,37 +32,27 @@
     z-index: 99;
 }
 
-/* 서비스가이드 카테고리 설명 백그라운드이미지 */
+/* 서비스가이드 클릭시 백그라운드 */
 .mainBox2_modal {
     background: url(https://www.oz-z.com/imgs/main/modal_bg2.png) 0 0 no-repeat;
     background-size: cover;
 }
 
 .mainBox3_modal {
-    background: url(../../imgs/main/modal_bg3.png) 0 0 no-repeat;
+    background: url(https://www.oz-z.com/imgs/main/modal_bg3.png) 0 0 no-repeat;
     background-size: cover;
 }
 
 .mainBox4_modal {
-    background: url(../../imgs/main/modal_bg4.png) 0 0 no-repeat; 
-        width: 2%;
-        z-index: 30;
-        position: relative;
-        left: 5.5%;
-        bottom: -169%;
-        /* top: 104%; */
-        cursor: pointer;
-        transition-property: width, left, top;
-        transition-duration: 0.7s;
-    
+    background: url(https://www.oz-z.com/imgs/main/modal_bg4.png) 0 0 no-repeat;
     background-size: cover;
 }
 
 .mainBox5_modal {
-    background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
+    background: url(https://www.oz-z.com/imgs/main/modal_bg5.png) 0 0 no-repeat;
     background-size: cover;
 }
-/* 서비스가이드 카테고리 설명 백그라운드이미지 끝 */
+
 .mainBox6_modal {
     background: url(../../imgs/main/modal_bg5.png) 0 0 no-repeat;
     background-size: cover;
@@ -96,8 +86,9 @@
     background-size: contain;
 }
 
+/* img 풀스크린일때  */
 .sub_modal > .inner .slideWrap .slideList .slideConBox img {
-    width: 85%;
+    width: 65%;
 }
 
 .sub_modal > .inner .slideWrap .slideList .slideConBox .conNum {
@@ -215,27 +206,18 @@
     margin-top: 15px;
 }
 
+/* 가이드안 go 글자 */
 .sub_modal .subBoxText .go {
     width: 75px;
-    height: auto;
+    height: 70px;
     margin-top: 30px;
-    font-size: 2em;
+    font-size: 5em;
     font-weight: 700;
     font-family: "ProximaNova";
     color: #fff;
     position: relative;
-}
+    background-color: #7F60FF;
 
-.sub_modal .subBoxText .go::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 12px;
-    background: url(../../imgs/main/go_btn.png) center no-repeat;
-    background-size: cover;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
 }
 
 .serviceBox {
@@ -289,7 +271,6 @@
     height: 0;
 }
 
-/* 서비스 오픈후 클릭하였을때 나오는 스크린 Back 버튼 상자 */
 .modal_box .close,
 .modalBox .close {
     font-size: 20px;
@@ -297,7 +278,8 @@
     font-family: "ProximaNova";
     font-weight: 700;
     padding-right: 40px;
-    background: url(/Front/img/close.png) right 0 center no-repeat;
+    background: url(../../imgs/common/closeBtn.png) right 0 center no-repeat;
+    background-size: 30px;
     display: block;
     position: absolute;
     top: 50px;
@@ -307,12 +289,12 @@
 
 .modal_box .close:hover,
 .modalBox .close:hover {
-    background: url(/Front/img/closecolor.png) right 0 center no-repeat;
+    background: url(../../imgs/common/closeBtn_on.png) right 0 center no-repeat;
     color: #7F60FF;
 }
 
 .serviceBox .subTitle {
-    font-size: 2.8em;
+    font-size: 4em;
     font-family: "ProximaNova";
     color: #fff;
     font-weight: 700;
@@ -370,6 +352,7 @@
     z-index: 99;
 }
 
+/* 가이드 안 버튼 뒤에 선 */
 .sub_modal .sPage::after {
     content: "";
     display: block;
@@ -383,9 +366,11 @@
     z-index: -2;
 }
 
+/* 가이드안 버튼 위치 */
 .sub_modal .sPage .swiper-pagination-bullet {
     float: left;
-    margin-right: calc(25% - 15px);
+/* 가이드안 버튼 간격 */
+    margin-right: calc(25% - 60px);
     position: relative;
     display: block;
     cursor: pointer;
@@ -408,7 +393,7 @@
 
 .sub_modal .sPage .swiper-pagination-bullet:last-child {
     margin-right: 0;
-}
+} 
 
 .sub_modal .sPage .swiper-pagination-bullet::after {
     content: "";
@@ -436,6 +421,7 @@
     border-radius: 50%;
 }
 
+/* 가이드안 움직이는 슬라이더 동그라미 */
 .sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     content: "";
     display: block;
@@ -452,32 +438,37 @@
     z-index: -1;
 }
 
+/* 카테고리 가이드안 움직이는 슬라이더 이름 */
 .sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     color: #7F60FF;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:first-child::after {
-    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
+    content: "카테고리 가이드";
     bottom: -43px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
+    content: "카테고리 버튼클릭";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
+    content: "룸화면 생성";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(4)::after {
-    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
+    content: "필요한 아이콘 클릭";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(5)::after {
-    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
+    content: "YES OR NO";
+    font-size: 12px;
+}
+.sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(6)::after {
+    content: "카테고리로 이동";
     font-size: 12px;
 }
 
@@ -553,6 +544,84 @@
 
 
 
+
+
+/*.sub_modal .slick-dots li button {
+    background: none;
+    border: none;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    font-size: 0px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+
+
+.sub_modal .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translate(-50%, 0);
+}
+
+.sub_modal .slick-dots li {
+    float: left;
+    margin-right: 8.3vw;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.sub_modal .slick-dots li:last-child {
+    margin-right: 0;
+}
+
+.sub_modal .slick-dots li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, 0);
+    color: #757575;
+    display: block;
+    width: 130px;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+}*/
+
+/*.sub_modal .slick-dots li.slick-active::after {
+    color: #7F60FF;
+    font-weight: 700;
+}
+
+.mainBox2_modal .slick-dots li:first-child::after {
+    content: "ê¸€ë¡œë²Œ ìŒì› ë°œë§¤";
+    bottom: -33px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(2)::after {
+    content: "ì›ìŠ¤í†± ë°œë§¤ ì†”ë£¨ì…˜";
+    font-size: 12px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(3)::after {
+    content: "ì „ ì„¸ê³„ ë™ì‹œ ë°œë§¤";
+    font-size: 12px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(4)::after {
+    content: "ë®¤ì§ë¹„ë””ì˜¤ ì‹¬ì˜";
+    font-size: 12px;
+}
+
+.mainBox2_modal .slick-dots li:nth-child(5)::after {
+    content: "ì˜¨ë¼ì¸ ì‹¬ì˜ ì‹œìŠ¤í…œ";
+    font-size: 12px;
+}*/
 
 .sub_modal .slick-dots li button {
     background: none;

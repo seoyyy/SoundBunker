@@ -1,8 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+#cate_player {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 22%;
+    position: absolute;
+    user-select: none;
+    top: 150%;
+    left: 14%;
+    z-index: 600;
 }
 
 :root {
@@ -15,9 +20,6 @@
     --darkwhite: #cecaca;
 }
 
-body {
-    height: 100vh;
-}
 
 .wrap__music {
     display: flex;
