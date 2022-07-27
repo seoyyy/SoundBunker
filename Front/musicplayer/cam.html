@@ -575,23 +575,28 @@
         playMusic();
         playListMusic();
     }
-    // 창이 열리면 노래 시작
+    // 창이 열리면 노래 시작 
+    
     window.addEventListener("load", () => {
         loadMusic(musicIndex);
-        playListMusic();
+        musicWrap.classList.add("paused");
+        musicPlay.innerText = "pause";
+        musicPlay.setAttribute("title", "일시정지")
+        musicAudio.play();
     });
+
 
 </script>
 <script>
 
-// let a = 0;
+// let a = 0;   
 // $(document).keydown(function(event) {
 //     if ( event.keyCode == 32 || event.which == 32 ) {
 //         // 창모드 일시정지
 //         if(a == 0){
 //             $("li[id^='bar']").css("animation-play-state", "paused"); 
 //             a = 1 
-//             exitFullScreenMode()
+//             exitFullScreenMo de()
 //             // 전체화면 생성
 //             $('.fullscreen').show();
             
