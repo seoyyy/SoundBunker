@@ -20,17 +20,8 @@ div#room_section {
     -webkit-tap-highlight-color: transparent;
     border-radius: 12px;
 }
-#expand {
-    color: white;
-    height: 10%;
-    font-size: 31px;
-    position: absolute;
-    left: 25.5%;
-    cursor: pointer;
-    width: 1%;
-    top: 5%;
-}
 
+/* 룸 이미지 */
 img#room {
     position: absolute;
     width: 26%;
@@ -43,7 +34,7 @@ img#room {
     box-shadow: 30px black;
     filter: drop-shadow(9px 74px 11px #000);
 }
-
+/* 덤벨 이미지 */
 img#dumbbell {
     width: 2%;
     z-index: 50;
@@ -54,6 +45,7 @@ img#dumbbell {
     bottom: -168%;
     cursor: pointer;
 }
+/* 청소기 이미지 */
 img#cleaner {
     width: 2.5%;
     z-index: 30;
@@ -66,7 +58,7 @@ img#cleaner {
     transition-duration: 0.7s;
     bottom: -143%;
 }
-
+/* 책 이미지 */
 img#book {
     width: 2.2%;
     z-index: 30;
@@ -77,7 +69,7 @@ img#book {
     transition-duration: 0.7s;
     bottom: -159%;
 }
-
+/* 태블릿 이미지 */
 div#tablet {
     position: absolute;
     bottom: -87%;
@@ -87,7 +79,7 @@ div#tablet {
     cursor: pointer;
     z-index: 50;
 }
-
+/* 휴식 이미지 */
 div#rest {
     position: absolute;
     bottom: -115%;
@@ -98,7 +90,7 @@ div#rest {
     z-index: 50;
 }
 
-/* 자세히 보기 눌렀을 때 trainsition */
+/* 카테고리모드 자세히 보기 눌렀을 때 trainsition */
 #more_distribution {
     transition-property: right;
     transition-duration: 1.2s;
@@ -107,6 +99,7 @@ div#rest {
     transition-property: left;
     transition-duration: 1.2s;
 }
+/* 캠모드 자세히 보기 눌렀을 때 trainsition */
 #more_marketing {
     transition-property: right;
     transition-duration: 1.2s;
@@ -122,11 +115,6 @@ div#rest {
     position: relative;
     overflow: hidden;
 }
-
-/*.mainBox_01 {
-    background: url(../../imgs/main/main_01.png) 0 0 no-repeat;
-    background-size: cover;
-}*/
 
 .mainBox .videoBox {
     position: absolute;

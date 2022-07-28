@@ -36,6 +36,7 @@
     <!-- siri css -->
     <link rel="stylesheet" href="/Front/temp copy/css/siri_style.css">
     <!-- 캠 css -->
+    <link rel="stylesheet" href="css/cam.css">
 
     <script src="/jquery-3.6.0.js"></script>
     <script src="js/common.js"></script>
@@ -331,11 +332,106 @@
                     <div class="mainBox mainBox_03" id="cammode" style="background-color: lightblue;">
                         <div class="conWrap">
                             <!-- 웹캠 -->
-                            <a id="save" href="" onclick="downFile(this)" style="display: none;">다운로드</a>
-                            <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
-                            <button id="snap" style="display: none;">캡쳐하기</button>
-                            <video id="video" width="640" height="480" autoplay></video>
-                            <canvas id="canvas" width="640" height="480"></canvas>
+                            <a id="save" onclick="downFile(this)">다운로드</a>
+    <button id="btn" onclick="cameraonoff()">On</button>
+    <button id="snap">캡쳐하기</button>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <script>
+        var video = document.getElementById("video");
+        var btn = document.getElementById("btn");
+        var snap = document.getElementById("snap");
+        var save = document.getElementById("save");
+        // canvas 조작
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var video = document.getElementById('video');
+        // 캡처 url 가져오기
+        document.getElementById("snap").addEventListener("click", function () {
+            var file = canvas.toDataURL(); // 촬영한 이미지의 base64 문자열
+            context.drawImage(video, 0, 0, 640, 480);
+        });
+        // 저장 url 가져오기
+        document.getElementById('save').addEventListener('click', function () {
+            event.target.href = canvas.toDataURL()
+        });
+
+        var isPlaying = video.srcObject;
+
+        // 시작될때 캠 강제클릭
+        $(btn).trigger('click')
+
+        // 자동으로 사진찍는 함수 (#subtext2 onclick -> 반복할 함수)
+
+        function start() {
+            console.log('snap test')
+            $(snap).trigger('click')
+            // 저장
+           $("#save").get(0).click();
+        }
+
+
+        
+        let arr = []
+        function downFile(down) {
+            data = {
+                "name" : "2022-07-27",
+                "img" : canvas.toDataURL('image/*')
+            }
+            arr.push(data);
+            
+            console.log(JSON.stringify(arr))
+            $(down).attr('href', '');
+            $(down).attr('download', 'img.jpg');
+        }
+        function cameraonoff() {
+            if (!isPlaying) {
+                cameraon();
+            } else {
+                cameraoff();
+            }
+        }
+
+        function cameraon() {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices
+                    .getUserMedia({
+                        video: true
+                    })
+                    .then(function (stream) {
+                        video.srcObject = stream;
+                        console.log('video start')
+                        video.play();
+                    })
+                    .then(() => {
+                        isPlaying = true;
+                        console.log('text change off')
+                        btn.innerText = "Off";
+                    });
+            }
+        }
+
+        function cameraoff() {
+            const stream = video.srcObject;
+            if (stream) {
+                const tracks = stream.getTracks();
+
+                tracks.forEach(function (track) {
+                    console.log('video stop')
+                    track.stop();
+                });
+
+                video.srcObject = null;
+                isPlaying = false;
+                console.log('text change on')
+                btn.innerText = "On";
+            }
+        }
+    </script>
+<!-- 웹캠 끝 -->
+
+
                             <div class="mainBoxText" id="mainBoxText2">
                                 <span class="block">뮤직 서비스, SOUNDBUNKER</span>
                                 <span class="engText">CAMMODE</span>
@@ -346,7 +442,7 @@
                                     향하는 <span>마케팅</span>이<br>
                                     시작됩니다.
                                 </div>
-                                <div class="subText" id="subText2">자세히 보기</div>
+                                <div class="subText" id="subText2" onclick=" setInterval(start, 2500);">자세히 보기</div>
                             </div>
                         </div>
                     </div>

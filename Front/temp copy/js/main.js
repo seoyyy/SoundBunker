@@ -118,7 +118,7 @@ $(document).ready(function () {
             });
             
 
-        }
+        } //캠모드
         if ($(document).scrollTop() > section3.top - 200) {
             $('.nav ul li').removeClass('on');
             $('.nav .playlist').addClass('on')
@@ -128,6 +128,7 @@ $(document).ready(function () {
 
             $('#more_marketing').css({ "right": "0%" })
             $('#mainBoxText2').css({ "left": "0%" })
+
         }
         if ($(document).scrollTop() > section4.top - 200) {
             $('.nav ul li').removeClass('on');
@@ -194,7 +195,7 @@ $(document).ready(function () {
 
 
     //  상희 
-    // 시작하기 눌렀을 때 기존 글씨 none & siri 발생
+    // 카테고리 모드 시작하기 눌렀을 때 기존 글씨 none & siri 발생
     $('#subText1').click(function () {
         $('#more_distribution').css({ "right": "-580%" })
         $('#mainBoxText1').css({ "left": "580%" })
@@ -206,10 +207,11 @@ $(document).ready(function () {
 
     
 
-    // 시작하기 눌렀을 때 기존 글씨 none & siri 발생
+    // 캠모드 시작하기 눌렀을 때 기존 글씨 none & 웹캠 화면 실행
     $('#subText2').click(function () {
         $('#more_marketing').css({ "right": "-580%" })
         $('#mainBoxText2').css({ "left": "580%" })
+        $('#video').css({"opacity": "1"})
     })
 
 

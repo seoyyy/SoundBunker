@@ -10,8 +10,8 @@
 
 <body>
     <a id="save" href="" onclick="downFile(this)">다운로드</a>
-    <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
-    <button id="snap" style="display: none;">캡쳐하기</button>
+    <button id="btn" onclick="cameraonoff()">On</button>
+    <button id="snap">캡쳐하기</button>
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" width="640" height="480"></canvas>
 
@@ -42,7 +42,7 @@
         // 2.5초 사진찍기
         setInterval(() => {
             console.log('snap test')
-            $(snap).trigger('dblclick')
+            $(snap).trigger('click')
             // 저장
             // $("#save").get(0).click();
         }, 2500);

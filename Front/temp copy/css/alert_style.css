@@ -1,23 +1,14 @@
-
-
-
-/* End room scene */
-/* The Modal (background) */
 .modal {
   display: grid;
-  /* position: fixed; */
   z-index: 1;
   left: 25%;
   top: 11%;
   width: 28%;
   height: 45%;
   overflow: auto;
-  /* background-color: black; */
-  /* background-color: rgba(0, 0, 0, 0.4); */
   position: absolute;
   z-index: 100;
   font-size: 150%;
-  /* min-height: 100vh; */
   font-size: 13vmin;
   display: flex;
   justify-content: center;
@@ -48,7 +39,7 @@ div#alert {
   -webkit-animation: fadein 3s;
   display: block;
 }
-/* 시리 클릭했을 때 나오는 알림 멘트 */
+/* 알림창 페이드인 이벤트2 (위치 다름) */
 #alert.effect2 {
   position: relative;
   left: -51%;
@@ -78,7 +69,7 @@ div#alert {
   -webkit-animation: fadein 10s;
   display: block;
 }
-
+/* 시리 질문중 첫째 줄 */
 #question_1 {
   width: 29.4em;
   font-family: "Courier";
@@ -91,8 +82,8 @@ div#alert {
   /*-moz-animation: fadein 3s;*/ /* Firefox */
 /*-webkit-animation: fadein 3s; /* Safari and Chrome */
 /*-o-animation: fadein 3s; /* Opera */
-
 }
+/* 시리 질문중 둘째 줄 */
 #question_2 {
   width: 29.4em;
   font-family: "Courier";
@@ -106,6 +97,7 @@ div#alert {
 /*-webkit-animation: fadein 3s; /* Safari and Chrome */
 /*-o-animation: fadein 3s; /* Opera */
 }
+/* 예 */
 #yes {
   width: 4.4em;
   font-family: "Courier";
@@ -120,6 +112,7 @@ div#alert {
   z-index: 100;
   /* -moz-animation: fadein 3s; */
 }
+/* 아니오 */
 #no {
   width: 4.4em;
   font-family: "Courier";
@@ -133,6 +126,7 @@ div#alert {
   cursor: pointer;
   /* -moz-animation: fadein 3s; */
 }
+/* 이런 노래는 어떠신가요? */
 #playing {
   width: 19.4em;
   font-family: Courier;
@@ -144,7 +138,7 @@ div#alert {
   font-size: 25px;
   cursor: pointer;
 }
-
+/* 페이드인 효과 정의 */
 @keyframes fadein {
   from {
       opacity: 0;
@@ -177,7 +171,6 @@ div#alert {
       opacity: 1;
   }
   }
-
 #siri_section {
   font-size: 13vmin;
   display: flex;
@@ -185,7 +178,7 @@ div#alert {
   align-items: center;
   display: none;
 }
-
+/* 저를 클릭해 주세요! */
 #siri_ment1 {
   position: relative;
   top: 60%;
@@ -195,63 +188,12 @@ div#alert {
   font-size: 30px;
   /* -moz-animation: fadein 3s; */
 }
-@keyframes fadein {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-@-moz-keyframes fadein { /* Firefox */
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-@-o-keyframes fadein { /* Opera */
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-p#yes {
-  display: inline;
-  position: absolute;
-  left: 38%;
-  cursor: pointer;
-  top: 55%;
-}
-
-p#no {
-  display: inline;
-  position: absolute;
-  left: 55%;
-  cursor: pointer;
-  top: 55%;
-  left: 55%;
-}
-
 #recursionPuzzleModal .modal-content {
   background-color: #0c4383f2;
   width: 50%;
   height: 22%;
   box-shadow: 0px 0px 30px 10px #0c4383f2;
 }
-
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
@@ -270,30 +212,24 @@ p#no {
   z-index: 100;
   position: relative;
 }
-
 #yes:hover,
 #yes:focus {
   color: var(--darkest-blue-color);
   text-decoration: none;
   cursor: pointer;
 }
-
 #no:hover,
 #no:focus {
   color: var(--darkest-blue-color);
   text-decoration: none;
   cursor: pointer;
 }
-
-
 /* End  Ryan Saunders - Pipe Puzzle  */
 /* Antoine Guillien - Recursion Puzzle   */
 #recursion-puzzle-container .won {
   padding: -3px;
   margin-top: 10%;
 }
-
-
 #recursion-puzzle-container p {
   font-weight: normal;
   font-size: 1.7rem;
@@ -303,34 +239,6 @@ p#no {
   font-family: "Cutive Mono", monospace;
   overflow: hidden;
 }
-
 #recursion-puzzle-container .won {
   padding: 1rem;
-}
-
-#question2 {
-  width: 100%;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-  overflow: hidden;
-  position: absolute;
-  left: 41%;
-  top: 46%;
-}
-
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
 }
