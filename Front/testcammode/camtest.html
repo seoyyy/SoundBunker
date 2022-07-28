@@ -5,7 +5,7 @@
     <title>Video stream Sandbox</title>
     <meta charset="UTF-8" />
 </head>
-<script src="/jquery-3.6.0.js"></script>
+<script src="/SoundBunker/jquery-3.6.0.js"></script>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <body>
@@ -43,29 +43,37 @@
         var arr = []
         function downFile(down) {
 
-            arr = []
             data = {
-                "name": "hwang",
-                "img": canvas.toDataURL('image/*')
+                "name" : "hwang",
+                "img" : canvas.toDataURL('image/*')
             }
             arr.push(data);
-            JSON.stringify(arr)
 
-            $(down).attr('href', '');
-            $(down).attr('download', 'img.jpg');
-            request();
+            if( arr.length == 2){
+
+                JSON.stringify(arr)
+            
+                $(down).attr('href', '');
+                $(down).attr('download', 'img.jpg');
+    
+                request();
+
+                arr = [];
+            }
         }
 
-        function request() {
+        function request(){
             $.ajax({
-                type: "POST",                               //1
-                url: "http://127.0.0.1:5000/post",                          //2
-                //dataType : 'json',                           //           //4
-                data: { "json": JSON.stringify(arr) },                 //5
-                success: successCall,                       //6
-                error: errorCall                          //7
+      type : "POST",                               //1
+      url : "http://127.0.0.1:5000/post",                          //2
+      //dataType : 'json',                           //           //4
+      data : { "json" : JSON.stringify(arr)},                 //5
+      success : successCall,                       //6
+      error   : errorCall                          //7
+        
+});
 
-            });
+
         }
 
 
@@ -76,18 +84,18 @@
             // 저장
             $("#save").get(0).click();
 
-        }, 2500);
-
-        function successCall(res) {
-            alert(res);
-        }
-        function errorCall() {
-            alert("전송실패");
-        }
-
-
+        }, 2000);
+        
+        function successCall(res){
+    alert(res);
+}
+function errorCall(){
+    alert("전송실패");
+}
 
 
+        
+        
 
 
 
