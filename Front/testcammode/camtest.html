@@ -24,6 +24,7 @@
         var canvas = document.getElementById('canvas');
         var context = canvas.getContext('2d');
         var video = document.getElementById('video');
+
         // 캡처 url 가져오기
         document.getElementById("snap").addEventListener("click", function () {
             var file = canvas.toDataURL(); // 촬영한 이미지의 base64 문자열
@@ -39,26 +40,60 @@
         // 시작될때 캠 강제클릭
         $(btn).trigger('click')
 
+        var arr = []
+        function downFile(down) {
+
+            arr = []
+            data = {
+                "name" : "hwang",
+                "img" : canvas.toDataURL('image/*')
+            }
+            arr.push(data);
+            JSON.stringify(arr)
+        
+            $(down).attr('href', '');
+            $(down).attr('download', 'img.jpg');
+
+            request();
+        }
+
+        function request(){
+            $.ajax({
+		type : "POST",                               //1
+		url : "http://127.0.0.1:5000/post",                          //2
+		//dataType : 'json',                           //           //4
+		data : { "json" : JSON.stringify(arr)},                 //5
+		success : successCall,                       //6
+		error   : errorCall                          //7
+        
+});
+
+
+        }
+
+
         // 2.5초 사진찍기
         setInterval(() => {
             console.log('snap test')
             $(snap).trigger('click')
             // 저장
-            // $("#save").get(0).click();
+            $("#save").get(0).click();
+
         }, 2500);
         
-        let arr = []
-        function downFile(down) {
-            data = {
-                "name" : "2022-07-27",
-                "img" : canvas.toDataURL('image/*')
-            }
-            arr.push(data);
-            
-            console.log(JSON.stringify(arr))
-            $(down).attr('href', '');
-            $(down).attr('download', 'img.jpg');
-        }
+        function successCall(res){
+    alert(res);
+}
+function errorCall(){
+    alert("전송실패");
+}
+
+
+        
+        
+
+
+
         function cameraonoff() {
             if (!isPlaying) {
                 cameraon();
@@ -102,8 +137,6 @@
                 btn.innerText = "On";
             }
         }
-
-
 
     </script>
 </body>
