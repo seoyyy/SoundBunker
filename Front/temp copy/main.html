@@ -44,10 +44,7 @@
     <script src="js/slick.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/swiper.min.js"></script>
-    <!-- 이미지 슬라이드 js -->
-    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
     <!-- 캠 js -->
-    <script src="js/cam.js"></script>
     <script src="/jquery-3.6.0.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <!---->
@@ -335,7 +332,7 @@
                             <a id="save" onclick="downFile(this)">다운로드</a>
                             <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
                             <button id="snap" style="display: none;">캡쳐하기</button>
-                            <video id="video" width="640" height="480" autoplay></video>
+                            <video id="video" width="100%" height="640" autoplay></video>
                             <canvas id="canvas" width="640" height="480"></canvas>
 
                             <script>
@@ -347,6 +344,7 @@
                                 var canvas = document.getElementById('canvas');
                                 var context = canvas.getContext('2d');
                                 var video = document.getElementById('video');
+
                                 // 캡처 url 가져오기
                                 document.getElementById("snap").addEventListener("click", function () {
                                     var file = canvas.toDataURL(); // 촬영한 이미지의 base64 문자열
@@ -358,7 +356,6 @@
                                 });
 
                                 var isPlaying = video.srcObject;
-
 
 
                                 var arr = []
@@ -389,71 +386,78 @@
 
                                     });
                                 }
-                                    // 반복 함수를 담을 객체 생성   
-                                    let image;
 
-                                    // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
-                                    function start() {
-                                        // 시작될때 캠 강제클릭
-                                        $(btn).trigger('click')
-                                        
-                                        // 2.5초마다 실행될 함수 (사진 저장)
-                                        function save() {
+                                function successCall(res) {
+                                    alert(res);
+                                }
+                                function errorCall() {
+                                    alert("전송실패");
+                                }
+                                // 반복 함수를 담을 객체 생성   
+                                let image;
+
+                                // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
+                                function start() {
+                                    // 시작될때 캠 강제클릭
+                                    $(btn).trigger('click')
+
+                                    // 2.5초마다 실행될 함수 (사진 저장)
+                                    function save() {
                                         $(snap).trigger('click')
                                         $("#save").get(0).click();
-                                        }
-                                        // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
-                                        image = setInterval(save, 2500);
                                     }
-                                    // Stop time 버튼을 누르면 실행될 함수(display:none)
-                                    function stop() {
-                                        // image의 반복실행을 종료한다.
-                                        clearInterval(image);
+                                    // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
+                                    image = setInterval(save, 2500);
+                                }
+                                // Stop time 버튼을 누르면 실행될 함수(display:none)
+                                function stop() {
+                                    // image의 반복실행을 종료한다.
+                                    clearInterval(image);
+                                }
+
+                                function cameraonoff() {
+                                    if (!isPlaying) {
+                                        cameraon();
+                                    } else {
+                                        cameraoff();
                                     }
+                                }
 
-                                    function cameraonoff() {
-                                        if (!isPlaying) {
-                                            cameraon();
-                                        } else {
-                                            cameraoff();
-                                        }
-                                    }
-
-                                    function cameraon() {
-                                        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-                                            navigator.mediaDevices
-                                                .getUserMedia({
-                                                    video: true
-                                                })
-                                                .then(function (stream) {
-                                                    video.srcObject = stream;
-                                                    console.log('video start')
-                                                    video.play();
-                                                })
-                                                .then(() => {
-                                                    isPlaying = true;
-                                                    console.log('text change off')
-                                                    btn.innerText = "Off";
-                                                });
-                                        }
-                                    }
-
-                                    function cameraoff() {
-                                        const stream = video.srcObject;
-                                        if (stream) {
-                                            const tracks = stream.getTracks();
-
-                                            tracks.forEach(function (track) {
-                                                console.log('video stop')
-                                                track.stop();
+                                function cameraon() {
+                                    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                                        navigator.mediaDevices
+                                            .getUserMedia({
+                                                video: true
+                                            })
+                                            .then(function (stream) {
+                                                video.srcObject = stream;
+                                                console.log('video start')
+                                                video.play();
+                                            })
+                                            .then(() => {
+                                                isPlaying = true;
+                                                console.log('text change off')
+                                                btn.innerText = "Off";
                                             });
-
-                                            video.srcObject = null;
-                                            isPlaying = false;
-                                            console.log('text change on')
-                                            btn.innerText = "On";
-                                        }
                                     }
+                                }
+
+                                function cameraoff() {
+                                    const stream = video.srcObject;
+                                    if (stream) {
+                                        const tracks = stream.getTracks();
+
+                                        tracks.forEach(function (track) {
+                                            console.log('video stop')
+                                            track.stop();
+                                        });
+
+                                        video.srcObject = null;
+                                        isPlaying = false;
+                                        console.log('text change on')
+                                        btn.innerText = "On";
+                                    }
+                                }
                             </script>
                             <!-- 웹캠 끝 -->
 

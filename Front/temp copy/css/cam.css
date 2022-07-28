@@ -8,6 +8,6 @@ video#video {
 }
 
 canvas#canvas {
-    display: none;
+    visibility: hidden;
 }
 
