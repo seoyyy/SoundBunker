@@ -394,12 +394,13 @@
 
                                     // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
                                     function start() {
-                                        // 2.5초마다 실행될 함수 (사진 저장)
                                         // 시작될때 캠 강제클릭
                                         $(btn).trigger('click')
+                                        
+                                        // 2.5초마다 실행될 함수 (사진 저장)
                                         function save() {
-
-                                            // $("#save").get(0).click();
+                                        $(snap).trigger('click')
+                                        $("#save").get(0).click();
                                         }
                                         // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
                                         image = setInterval(save, 2500);
