@@ -45,30 +45,28 @@
 
             arr = []
             data = {
-                "name" : "hwang",
-                "img" : canvas.toDataURL('image/*')
+                "name": "hwang",
+                "img": canvas.toDataURL('image/*')
             }
             arr.push(data);
             JSON.stringify(arr)
-        
+
             $(down).attr('href', '');
             $(down).attr('download', 'img.jpg');
 
             request();
         }
 
-        function request(){
+        function request() {
             $.ajax({
-		type : "POST",                               //1
-		url : "http://127.0.0.1:5000/post",                          //2
-		//dataType : 'json',                           //           //4
-		data : { "json" : JSON.stringify(arr)},                 //5
-		success : successCall,                       //6
-		error   : errorCall                          //7
-        
-});
+                type: "POST",                               //1
+                url: "http://127.0.0.1:5000/post",                          //2
+                //dataType : 'json',                           //           //4
+                data: { "json": JSON.stringify(arr) },                 //5
+                success: successCall,                       //6
+                error: errorCall                          //7
 
-
+            });
         }
 
 
@@ -80,17 +78,17 @@
             $("#save").get(0).click();
 
         }, 2500);
-        
-        function successCall(res){
-    alert(res);
-}
-function errorCall(){
-    alert("전송실패");
-}
+
+        function successCall(res) {
+            alert(res);
+        }
+        function errorCall() {
+            alert("전송실패");
+        }
 
 
-        
-        
+
+
 
 
 

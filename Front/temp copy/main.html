@@ -333,110 +333,128 @@
                         <div class="conWrap">
                             <!-- 웹캠 -->
                             <a id="save" onclick="downFile(this)">다운로드</a>
-    <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
-    <button id="snap" style="display: none;">캡쳐하기</button>
-    <video id="video" width="640" height="480" autoplay></video>
-    <canvas id="canvas" width="640" height="480"></canvas>
+                            <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
+                            <button id="snap" style="display: none;">캡쳐하기</button>
+                            <video id="video" width="640" height="480" autoplay></video>
+                            <canvas id="canvas" width="640" height="480"></canvas>
 
-    <script>
-        var video = document.getElementById("video");
-        var btn = document.getElementById("btn");
-        var snap = document.getElementById("snap");
-        var save = document.getElementById("save");
-        // canvas 조작
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-        var video = document.getElementById('video');
-        // 캡처 url 가져오기
-        document.getElementById("snap").addEventListener("click", function () {
-            var file = canvas.toDataURL(); // 촬영한 이미지의 base64 문자열
-            context.drawImage(video, 0, 0, 640, 480);
-        });
-        // 저장 url 가져오기
-        document.getElementById('save').addEventListener('click', function () {
-            event.target.href = canvas.toDataURL()
-        });
+                            <script>
+                                var video = document.getElementById("video");
+                                var btn = document.getElementById("btn");
+                                var snap = document.getElementById("snap");
+                                var save = document.getElementById("save");
+                                // canvas 조작
+                                var canvas = document.getElementById('canvas');
+                                var context = canvas.getContext('2d');
+                                var video = document.getElementById('video');
+                                // 캡처 url 가져오기
+                                document.getElementById("snap").addEventListener("click", function () {
+                                    var file = canvas.toDataURL(); // 촬영한 이미지의 base64 문자열
+                                    context.drawImage(video, 0, 0, 640, 480);
+                                });
+                                // 저장 url 가져오기
+                                document.getElementById('save').addEventListener('click', function () {
+                                    event.target.href = canvas.toDataURL()
+                                });
 
-        var isPlaying = video.srcObject;
+                                var isPlaying = video.srcObject;
 
-        // 시작될때 캠 강제클릭
-        $(btn).trigger('click')
-        
-        // 반복 함수를 담을 객체 생성   
-            let image;
 
-            // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
-            function start() {
-              // 2.5초마다 실행될 함수 (사진 저장)
-              function save() {
-                $("#save").get(0).click();
-              }
-              // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
-              image = setInterval(save, 2500);
-            }
-            // Stop time 버튼을 누르면 실행될 함수(display:none)
-            function stop() {
-              // image의 반복실행을 종료한다.
-              clearInterval(image);
-            }
-        
-        let arr = []
-        function downFile(down) {
-            data = {
-                "name" : "2022-07-27",
-                "img" : canvas.toDataURL('image/*')
-            }
-            arr.push(data);
-            
-            console.log(JSON.stringify(arr))
-            $(down).attr('href', '');
-            $(down).attr('download', 'img.jpg');
-        }
-        function cameraonoff() {
-            if (!isPlaying) {
-                cameraon();
-            } else {
-                cameraoff();
-            }
-        }
 
-        function cameraon() {
-            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-                navigator.mediaDevices
-                    .getUserMedia({
-                        video: true
-                    })
-                    .then(function (stream) {
-                        video.srcObject = stream;
-                        console.log('video start')
-                        video.play();
-                    })
-                    .then(() => {
-                        isPlaying = true;
-                        console.log('text change off')
-                        btn.innerText = "Off";
-                    });
-            }
-        }
+                                var arr = []
+                                function downFile(down) {
 
-        function cameraoff() {
-            const stream = video.srcObject;
-            if (stream) {
-                const tracks = stream.getTracks();
+                                    arr = []
+                                    data = {
+                                        "name": "hwang",
+                                        "img": canvas.toDataURL('image/*')
+                                    }
+                                    arr.push(data);
+                                    JSON.stringify(arr)
 
-                tracks.forEach(function (track) {
-                    console.log('video stop')
-                    track.stop();
-                });
+                                    $(down).attr('href', '');
+                                    $(down).attr('download', 'img.jpg');
 
-                video.srcObject = null;
-                isPlaying = false;
-                console.log('text change on')
-                btn.innerText = "On";
-            }
-        }
-    </script>
-<!-- 웹캠 끝 -->
+                                    request();
+                                }
+
+                                function request() {
+                                    $.ajax({
+                                        type: "POST",                               //1
+                                        url: "http://127.0.0.1:5000/post",                          //2
+                                        //dataType : 'json',                           //           //4
+                                        data: { "json": JSON.stringify(arr) },                 //5
+                                        success: successCall,                       //6
+                                        error: errorCall                          //7
+
+                                    });
+                                }
+                                    // 반복 함수를 담을 객체 생성   
+                                    let image;
+
+                                    // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
+                                    function start() {
+                                        // 2.5초마다 실행될 함수 (사진 저장)
+                                        // 시작될때 캠 강제클릭
+                                        $(btn).trigger('click')
+                                        function save() {
+
+                                            // $("#save").get(0).click();
+                                        }
+                                        // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
+                                        image = setInterval(save, 2500);
+                                    }
+                                    // Stop time 버튼을 누르면 실행될 함수(display:none)
+                                    function stop() {
+                                        // image의 반복실행을 종료한다.
+                                        clearInterval(image);
+                                    }
+
+                                    function cameraonoff() {
+                                        if (!isPlaying) {
+                                            cameraon();
+                                        } else {
+                                            cameraoff();
+                                        }
+                                    }
+
+                                    function cameraon() {
+                                        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                                            navigator.mediaDevices
+                                                .getUserMedia({
+                                                    video: true
+                                                })
+                                                .then(function (stream) {
+                                                    video.srcObject = stream;
+                                                    console.log('video start')
+                                                    video.play();
+                                                })
+                                                .then(() => {
+                                                    isPlaying = true;
+                                                    console.log('text change off')
+                                                    btn.innerText = "Off";
+                                                });
+                                        }
+                                    }
+
+                                    function cameraoff() {
+                                        const stream = video.srcObject;
+                                        if (stream) {
+                                            const tracks = stream.getTracks();
+
+                                            tracks.forEach(function (track) {
+                                                console.log('video stop')
+                                                track.stop();
+                                            });
+
+                                            video.srcObject = null;
+                                            isPlaying = false;
+                                            console.log('text change on')
+                                            btn.innerText = "On";
+                                        }
+                                    }
+                            </script>
+                            <!-- 웹캠 끝 -->
 
 
                             <div class="mainBoxText" id="mainBoxText2">
@@ -449,12 +467,12 @@
                                     향하는 <span>마케팅</span>이<br>
                                     시작됩니다.
                                 </div>
-                                <script>  
-                                
+                                <script>
+
 
                                 </script>
                                 <div class="subText" id="subText2" onclick="start()">자세히 보기</div>
-                                
+
                             </div><button onclick="stop()" id="stop" style="display: none;">Stop time</button>
 
                         </div>
