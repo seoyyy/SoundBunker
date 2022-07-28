@@ -136,7 +136,7 @@
                         <div class="inner">
                             <!-- <a id="btn_help" href="https://service.oz-z.com/support/help" target="_blank"
                                 class="bg help">HELP</a> -->
-                            <a id="btn_signup" href="/Front/title/login.html" target="_blank"
+                            <a id="btn_signup" href="/Front/login/login.html" target="_blank"
                                 class="col signUp">Sign</a>
                             <a id="btn_service" href="#none" class="bg service">SERVICE</a>
                         </div>
@@ -333,8 +333,8 @@
                         <div class="conWrap">
                             <!-- 웹캠 -->
                             <a id="save" onclick="downFile(this)">다운로드</a>
-    <button id="btn" onclick="cameraonoff()">On</button>
-    <button id="snap">캡쳐하기</button>
+    <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
+    <button id="snap" style="display: none;">캡쳐하기</button>
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" width="640" height="480"></canvas>
 
@@ -361,17 +361,24 @@
 
         // 시작될때 캠 강제클릭
         $(btn).trigger('click')
+        
+        // 반복 함수를 담을 객체 생성   
+            let image;
 
-        // 자동으로 사진찍는 함수 (#subtext2 onclick -> 반복할 함수)
-
-        function start() {
-            console.log('snap test')
-            $(snap).trigger('click')
-            // 저장
-           $("#save").get(0).click();
-        }
-
-
+            // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
+            function start() {
+              // 2.5초마다 실행될 함수 (사진 저장)
+              function save() {
+                $("#save").get(0).click();
+              }
+              // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
+              image = setInterval(save, 2500);
+            }
+            // Stop time 버튼을 누르면 실행될 함수(display:none)
+            function stop() {
+              // image의 반복실행을 종료한다.
+              clearInterval(image);
+            }
         
         let arr = []
         function downFile(down) {
@@ -442,8 +449,14 @@
                                     향하는 <span>마케팅</span>이<br>
                                     시작됩니다.
                                 </div>
-                                <div class="subText" id="subText2" onclick=" setInterval(start, 2500);">자세히 보기</div>
-                            </div>
+                                <script>  
+                                
+
+                                </script>
+                                <div class="subText" id="subText2" onclick="start()">자세히 보기</div>
+                                
+                            </div><button onclick="stop()" id="stop" style="display: none;">Stop time</button>
+
                         </div>
                     </div>
 

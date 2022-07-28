@@ -129,6 +129,10 @@ $(document).ready(function () {
             $('#more_marketing').css({ "right": "0%" })
             $('#mainBoxText2').css({ "left": "0%" })
 
+            // 스크롤시 자동 저장 멈춤
+            $("#stop").trigger('click');
+            // 비디오 감추기
+            $('#video').css({"opacity":"0"});
         }
         if ($(document).scrollTop() > section4.top - 200) {
             $('.nav ul li').removeClass('on');
