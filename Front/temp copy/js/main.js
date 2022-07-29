@@ -119,7 +119,7 @@ $(document).ready(function () {
             
 
         } //캠모드
-        if ($(document).scrollTop() > section3.top - 200) {
+        if ($(document).scrollTop() > section4.top - 200) {
             $('.nav ul li').removeClass('on');
             $('.nav .playlist').addClass('on')
             $('.scrollDown').css('display', 'block')
@@ -134,7 +134,7 @@ $(document).ready(function () {
             // 비디오 감추기
             $('#video').css({"opacity":"0"});
         }
-        if ($(document).scrollTop() > section4.top - 200) {
+        if ($(document).scrollTop() > section5.top - 200) {
             $('.nav ul li').removeClass('on');
             $('.nav .team').addClass('on')
             $('.scrollDown').css('display', 'none')
