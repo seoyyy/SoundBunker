@@ -361,18 +361,23 @@
                                 var arr = []
                                 function downFile(down) {
 
-                                    arr = []
                                     data = {
                                         "name": "hwang",
                                         "img": canvas.toDataURL('image/*')
                                     }
                                     arr.push(data);
-                                    JSON.stringify(arr)
 
-                                    $(down).attr('href', '');
-                                    $(down).attr('download', 'img.jpg');
+                                    if (arr.length == 2) {
 
-                                    request();
+                                        JSON.stringify(arr)
+
+                                        $(down).attr('href', '');
+                                        $(down).attr('download', 'img.jpg');
+
+                                        request();
+
+                                        arr = [];
+                                    }
                                 }
 
                                 function request() {
@@ -381,7 +386,7 @@
                                         url: "http://127.0.0.1:5000/post",                          //2
                                         //dataType : 'json',                           //           //4
                                         data: { "json": JSON.stringify(arr) },                 //5
-                                        success: successCall,                       //6
+                                        success: successCall,                     //6                     //6
                                         error: errorCall                          //7
 
                                     });
@@ -407,7 +412,7 @@
                                         $("#save").get(0).click();
                                     }
                                     // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
-                                    image = setInterval(save, 2500);
+                                    image = setInterval(save, 2000);
                                 }
                                 // Stop time 버튼을 누르면 실행될 함수(display:none)
                                 function stop() {
