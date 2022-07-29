@@ -87,7 +87,7 @@ $(document).ready(function () {
             $('#cleaner').css({ "position": "relative", "left": "70%" });
             $('#book').css({ "position": "relative", "left": "70%" });
 
-           
+
             $('#more_distribution').css({ "right": "0%" })
             $('#mainBoxText1').css({ "left": "0%" })
             $('#room_slide').css({ "left": "-120%", "cursor": "initial" });
@@ -212,7 +212,7 @@ $(document).ready(function () {
 
 
 
-    //  상희 
+
     // 카테고리 모드 시작하기 눌렀을 때 기존 글씨 none & siri 발생
     $('#subText1').click(function () {
         $('#more_distribution').css({ "right": "-580%" })
