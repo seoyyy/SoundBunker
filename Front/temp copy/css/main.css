@@ -89,6 +89,16 @@ div#rest {
     cursor: pointer;
     z-index: 50;
 }
+/* 팀 이미지 */
+img#bpm_img {
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: -70%;
+    transform: translate(-50%, -50%);
+    transition-property: left;
+    transition-duration: 1.2s;
+}
 
 /* 카테고리모드 자세히 보기 눌렀을 때 trainsition */
 #more_distribution {
@@ -105,6 +115,15 @@ div#rest {
     transition-duration: 1.2s;
 }
 #mainBoxText2 {
+    transition-property: left;
+    transition-duration: 1.2s;
+}
+/* 팀 소개 자세히 보기 눌렀을 때 transition */
+#more_subscription {
+    transition-property: right;
+    transition-duration: 1.2s;
+}
+#mainBoxText3 {
     transition-property: left;
     transition-duration: 1.2s;
 }
