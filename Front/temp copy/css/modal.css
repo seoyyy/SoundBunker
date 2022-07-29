@@ -380,7 +380,7 @@
 
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet,
 .sub_modal .swiper-pagination4 .swiper-pagination-bullet{
-    margin-right: calc(50% - 20px);
+    margin-right: calc(25% - 60px);
 }
 
 .sub_modal .swiper-pagination5 .swiper-pagination-bullet{
@@ -464,7 +464,7 @@
 }
 
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(5)::after {
-    content: "YES OR NO";
+    content: "카테고리";
     font-size: 12px;
 }
 .sub_modal .swiper-pagination2 .swiper-pagination-bullet:nth-child(6)::after {
@@ -474,73 +474,39 @@
 
 
 
+.sub_modal .sPage .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    color: #7F60FF;
+}
+
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet:first-child::after {
-    content: "ìŠ¤ë§ˆíŠ¸ë§í¬";
+    content: "캠모드 가이드";
     bottom: -43px;
 }
 
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "í•˜ë‚˜ì˜ ê°„ê²°í•œ ì˜¤ì¦ˆë§í¬";
+    content: "cammode 클릭";
     font-size: 12px;
 }
 
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "ë‹¹ì‹  ìŒì•…ìœ¼ë¡œì˜ ì§€ë¦„ê¸¸";
+    content: "자세히 보기";
     font-size: 12px;
 }
 
-
-.sub_modal .swiper-pagination4 .swiper-pagination-bullet:first-child::after {
-    content: "ë®¤ì§€ì…˜ ì—‘ì…€ëŸ¬ë ˆì´í„°";
-    width: 135px;
-    bottom: -43px;
-}
-
-.sub_modal .swiper-pagination4 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "ë§žì¶¤í˜• ì„±ìž¥ í”„ë¡œì íŠ¸";
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(4)::after {
+    content: "캠 자동 실행";
     font-size: 12px;
 }
 
-.sub_modal .swiper-pagination4 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "ëª¨ë“  ê¶Œí•œì€ ë®¤ì§€ì…˜ì˜ ê²ƒ";
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(5)::after {
+    content: "캠모드";
+    font-size: 12px;
+}
+.sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(6)::after {
+    content: "스크린 세이버";
     font-size: 12px;
 }
 
-
-
-
-.sub_modal .swiper-pagination5 .swiper-pagination-bullet:first-child::after {
-    content: "SUBSCRIPTION";
-    width: 135px;
-    bottom: -43px;
-}
-
-.sub_modal .swiper-pagination5 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "ì˜¤ì¦ˆ êµ¬ë… ìš”ê¸ˆì œ";
-    font-size: 12px;
-}
-
-
-.sub_modal .swiper-pagination6 .swiper-pagination-bullet:first-child::after {
-    content: "SUBSCRIPTION";
-    width: 135px;
-    bottom: -43px;
-}
-
-.sub_modal .swiper-pagination6 .swiper-pagination-bullet:nth-child(2)::after {
-    content: "êµ¬ë…ë£Œ ë¬´ë£Œ";
-    font-size: 12px;
-}
-
-.sub_modal .swiper-pagination6 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "PRO";
-    font-size: 12px;
-}
-
-.sub_modal .swiper-pagination6 .swiper-pagination-bullet:nth-child(4)::after {
-    content: "BASIC";
-    font-size: 12px;
-}
 
 
 
