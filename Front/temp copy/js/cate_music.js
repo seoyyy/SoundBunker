@@ -1,20 +1,20 @@
 let allMusic = [
     {
-        name : "내손을 잡아",
+        name : "교진이 잡아",
         artist : "아이유(IU)",
-        img : "music-1",
+        // img : "music-1",
         audio : "music-1"
     },
     {
         name : "내가 아니라도",
         artist : "주호",
-        img : "music-2",
+        // img : "music-2",
         audio : "music-2"
     },
     {
         name : "나의 X에게",
         artist : "경서",
-        img : "music-3",
+        // img : "music-3",
         audio : "music-3"
     },
     {

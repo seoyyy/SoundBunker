@@ -489,7 +489,7 @@
 }
 
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(3)::after {
-    content: "자세히 보기";
+    content: "시작하기";
     font-size: 12px;
 }
 
@@ -499,7 +499,7 @@
 }
 
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(5)::after {
-    content: "캠모드";
+    content: "음악 캠모드";
     font-size: 12px;
 }
 .sub_modal .swiper-pagination3 .swiper-pagination-bullet:nth-child(6)::after {
