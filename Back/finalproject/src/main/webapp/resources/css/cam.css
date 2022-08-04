@@ -1,0 +1,13 @@
+video#video {
+    /* 가운데 정렬 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+canvas#canvas {
+    visibility: hidden;
+}
+

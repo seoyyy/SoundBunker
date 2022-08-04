@@ -1,0 +1,892 @@
+/* category section */
+
+div#room_section {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translate(0, -50%);
+    color: white;
+    font-size: 30px;
+    display: none;
+    background-image: radial-gradient(circle, #171424, black);
+    width: 72%;
+    height: 83%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 12px;
+}
+
+/* 룸 이미지 */
+img#room {
+    position: absolute;
+    width: 26%;
+    left: 70%;
+    bottom: -148%;
+    transition-property: bottom;
+    transition-duration: 1.2s;
+    background-color: inherit;
+    z-index: 30;
+    box-shadow: 30px black;
+    filter: drop-shadow(9px 74px 11px #000);
+}
+/* 덤벨 이미지 */
+img#dumbbell {
+    width: 2%;
+    z-index: 50;
+    position: relative;
+    left: 70%;
+    transition-property: width, left, top;
+    transition-duration: 0.7s;
+    bottom: -168%;
+    cursor: pointer;
+}
+/* 청소기 이미지 */
+img#cleaner {
+    width: 2.5%;
+    z-index: 30;
+    position: relative;
+    left: 70%;
+    /* top: 146.3%; */
+    
+    cursor: pointer;
+    transition-property: width, left, top;
+    transition-duration: 0.7s;
+    bottom: -143%;
+}
+/* 책 이미지 */
+img#book {
+    width: 2.2%;
+    z-index: 30;
+    position: relative;
+    left: 70%;
+    cursor: pointer;
+    transition-property: width, left, top;
+    transition-duration: 0.7s;
+    bottom: -159%;
+}
+/* 태블릿 이미지 */
+div#tablet {
+    position: absolute;
+    bottom: -87%;
+    width: 2.5%;
+    height: 14%;
+    left: 30.5%;
+    cursor: pointer;
+    z-index: 50;
+}
+/* 휴식 이미지 */
+div#rest {
+    position: absolute;
+    bottom: -115%;
+    width: 7.5%;
+    height: 31%;
+    left: 33%;
+    cursor: pointer;
+    z-index: 50;
+}
+/* 팀 이미지 */
+img#bpm_img {
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: -70%;
+    transform: translate(-50%, -50%);
+    transition-property: left;
+    transition-duration: 1.2s;
+}
+
+/* 카테고리모드 자세히 보기 눌렀을 때 trainsition */
+#more_distribution {
+    transition-property: right;
+    transition-duration: 1.2s;
+}
+#mainBoxText1 {
+    transition-property: left;
+    transition-duration: 1.2s;
+}
+/* 캠모드 자세히 보기 눌렀을 때 trainsition */
+#more_marketing {
+    transition-property: right;
+    transition-duration: 1.2s;
+}
+#mainBoxText2 {
+    transition-property: left;
+    transition-duration: 1.2s;
+}
+/* 팀 소개 자세히 보기 눌렀을 때 transition */
+#more_subscription {
+    transition-property: right;
+    transition-duration: 1.2s;
+}
+#mainBoxText3 {
+    transition-property: left;
+    transition-duration: 1.2s;
+}
+
+.mainBoxWrap .mainBox {
+    height: 100vh;
+    min-height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainBox .videoBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+    background: #000;
+}
+
+.mainBox .videoBox video {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: auto !important;
+    width: auto !important;
+    min-width: 100%;
+    min-height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.mainBox_02 {
+    background: url(../../imgs/main/main_02.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox_03 {
+    background: url(../../imgs/main/main_03.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox_04 {
+    background: url(../../imgs/main/main_04.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox_05 {
+    background: url(../../imgs/main/main_05.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.mainBox .mainText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    font-size: 6em;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: -5px;
+    z-index: 10;
+}
+
+.mainBox .mainText span {
+    font-weight: 700;
+    color: #fff;
+}
+
+.mainBox .mainSubText {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    font-size: 2em;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: -1px;
+    text-align: center;
+    z-index: 10;
+}
+
+.mainBox .mainSubText .space {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.mainBox .mainSubText .spacebar {
+    width: 80px;
+    display: inline-block;
+}
+
+.mainBox .mainSubText span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.9em;
+}
+
+.mainBox .mainSubText span.prox {
+    font-size: 2.8em;
+}
+
+.mainBox .mainBoxText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    font-size: 2em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.mainBox .mainBoxText .block {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mainBox .mainBoxText .engText {
+    margin-top: 15px;
+    font-size: 2.5em;
+    font-family: "ProximaNova";
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+}
+
+.mainBox .mainBoxText .engText::before {
+    content: "[";
+    display: block;
+    position: absolute;
+    top: 44%;
+    left: -35px;
+    transform: translate(0, -50%);
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.mainBox .mainBoxText .engText::after {
+    content: "]";
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: -35px;
+    transform: translate(0, -50%);
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.mainBox .mainBoxSubText {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.mainBox .mainBoxSubText .textWrap {
+    font-size: 6em;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: -5px;
+    background: url(../../imgs/common/view_more_btn.png) left 0 bottom 0 no-repeat;
+    background-size: contain;
+    padding-bottom: 50px;
+}
+
+.mainBox .mainBoxSubText .textWrap span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.mainBox .mainBoxSubText .subText {
+    float: right;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.scrollDown {
+    width: 115px;
+    height: 52px;
+    background: url(/Front/img/scroll_down.png) center no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+}
+
+.serviceSlot {
+    width: 300px;
+    height: 100px;
+    background: url(../../imgs/main/slogan_slot.gif);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+    z-index: 10;
+}
+
+.sub_modal > .inner .slideWrap .slideList .slideConBox.subscriptionConBox {
+    width: 98.3em;
+    color: #fff;
+}
+
+.slideConBox .subscriptionBox {
+    width: 33.3%;
+    float: left;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.mainBox6_modal .slideConBox .subscriptionBox {
+    width: 100%;
+}
+
+.slideConBox .subscriptionBox > div {
+    border-bottom: 1px solid #7F60FC;
+    color: #fff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slideConBox .subscriptionBox.Box_01.on {
+    border: 4px solid #fff;
+    box-sizing: border-box;
+}
+
+.slideConBox .subscriptionBox.Box_02.on {
+    border: 4px solid #fff;
+    box-sizing: border-box;
+}
+
+.slideConBox .subscriptionBox .TitelBox {
+    height: 222px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.slideConBox .subscriptionBox .conBox {
+    height: 60px;
+}
+
+.slideConBox .subscriptionBox .conBox.DistrBox {
+    height: 180px;
+}
+
+.slideConBox .subscriptionBox .conBox.UpstreamBox {
+    height: 120px;
+    margin-bottom: 60px;
+}
+
+.slideConBox .conBox .cateTitle {
+    width: 50%;
+    float: left;
+    color: #7F60FC;
+    line-height: 60px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slideConBox .conBox.DistrBox .cateTitle {
+    line-height: 180px;
+}
+
+.slideConBox .conBox.UpstreamBox .cateTitle {
+    line-height: 120px;
+}
+
+.slideConBox .conBox .cateDesc {
+    width: 50%;
+    float: right;
+}
+
+.slideConBox .conBox .cateDesc li {
+    color: #ffffff;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #262626;
+    box-sizing: border-box;
+}
+
+.slideConBox .conBox .cateDesc li:last-child {
+    border-bottom: none;
+}
+
+.slideConBox .Box_02 .conBox .cateDesc {
+    width: 100%;
+    float: none;
+}
+
+
+.slideConBox .Box_02 .conBox .cateDesc li {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 14px;
+    /* line-height: 1.8; */
+}
+
+.slideConBox .Box_02 .conBox .cateDesc .list_h {
+    line-height: 35px;
+}
+
+.slideConBox .Box_02 .conBox .cateDesc li .grayPoint {
+    color: #707070;
+    font-weight: normal;
+    font-size: 12px;
+    display: block;
+    line-height: 12px;
+}
+
+.slideConBox .Box_02.Box_03 .conBox .cateDesc li {
+    color: #707070;
+
+}
+
+.slideConBox .subscriptionBox.Box_01 .TitelBox .textArea {
+    font-size: 1.8em;
+    padding-top: 84px;
+    color: #fff;
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .mainTit {
+    font-size: 1.8em;
+    color: #fff;
+    padding-top: 36px;
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .subscriptionArea {
+    font-size: 1.2em;
+    color: #606060;
+    padding-top: 0px;
+
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .sizeTxt {
+    font-size: 2em;
+    color: #606060;
+    padding-top: 0;
+    position: relative;
+    margin-right: 5px;
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .sizeTxt::after {
+    content: "";
+    display: block;
+    width: 110%;
+    height: 1px;
+    background: #606060;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slideConBox .subscriptionBox.Box_02.Box_03 .TitelBox .sizeTxt::after {
+    display: none;
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .pointTxt {
+    font-size: 2em;
+    color: #ff38e8;
+    padding-top: 0;
+
+}
+
+
+
+.slideConBox .Box_02 .MarketBox .desclist.chkImg {
+    height: 100%;
+    background: url(../../imgs/common/check_on.png) center no-repeat;
+}
+
+.slideConBox .Box_02.Box_03 .MarketBox .desclist.chkImg {
+    height: 100%;
+    background: url(../../imgs/common/check_on.png) center no-repeat;
+    opacity: 0.5;
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .pointTxt {
+    font-size: 1.6em;
+    color: #ff38e8;
+    margin-top: 15px;
+    font-weight: normal;
+
+}
+
+.slideConBox .subscriptionBox.Box_02 .TitelBox .linkArea a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 25px;
+    width: 114px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #4517c4;
+    margin-top: 20px;
+
+
+}
+
+.slideConBox .subscriptionBox.Box_02.Box_03 .TitelBox .linkArea a {
+    background-color: #757575;
+}
+
+.slideConBox .subscriptionBox.Box_02.Box_03 .TitelBox .linkArea a {
+    background-color: #757575;
+}
+
+.slideConBox .conBox.MarketBox .pointTxt {
+    color: #ff38e8;
+    font-weight: normal;
+    margin-left: 5px;
+
+}
+
+.mainBox6_modal {
+    display: none;
+}
+
+.footer {
+    padding: 50px 0;
+    z-index: 98;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.footer .inner {
+    width: 90%;
+    margin: auto;
+}
+
+.footer .logo {
+    float: left;
+    width: 72px;
+    margin-right: 80px;
+    margin-top: 5px;
+}
+
+.footer .contents {
+    float: left;
+}
+
+.footer .contents .link::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer .contents .link a {
+    font-size: 12px;
+    color: #fff;
+    margin-right: 8px;
+    padding-right: 8px;
+    display: inline-block;
+    position: relative;
+    /* float: left; */
+}
+
+.footer .contents .link a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    width: 1px;
+    height: 10px;
+}
+
+.footer .contents .link a:last-child::after {
+    content: "";
+    display: none;
+}
+
+.footer .contents .footer_copy {
+    font-family: "ProximaNova";
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 17px;
+}
+
+.footer .site_link {
+    float: right;
+}
+
+.footer .site_link a {
+    display: block;
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.footer .site_link a:last-child {
+    margin-right: 0;
+}
+
+.footer .site_link .facebook {
+    background: url(../../imgs/common/facebook.png) center no-repeat;
+    background-size: cover;
+}
+
+.footer .site_link .instar {
+    background: url(../../imgs/common/instar.png) center no-repeat;
+    background-size: cover;
+}
+
+.footer .site_link .youtube {
+    background: url(../../imgs/common/youtube.png) center no-repeat;
+    background-size: cover;
+}
+
+.footer .site_link select {
+    font-size: 14px;
+    font-family: "ProximaNova";
+    appearance: none;
+    width: 153px;
+    height: 32px;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    background: url(../../imgs/common/select_arrow.png) right 10px center transparent no-repeat;
+    background-size: 24px;
+    text-indent: 15px;
+    border-radius: 100px;
+    margin-left: 40px;
+}
+
+.footer .site_link select option {
+    color: #000;
+    text-indent: 15px;
+    font-family: "ProximaNova";
+}
+
+@media(max-width:1600px) {
+    .modalBox {
+        overflow-y: scroll;
+    }
+
+    .modalBox::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .modalBox::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    .modalBox::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #999;
+    }
+
+    .modalBox::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+
+    .mainBox .mainBoxSubText .textWrap {
+        font-size: 4.5em;
+    }
+
+    .footer {
+        width: 100%;
+        bottom: 30px;
+        padding: 30px 0;
+        transform: translate(0, 0);
+        overflow: hidden;
+    }
+
+    .footer .logo {
+        float: unset;
+        margin-bottom: 20px;
+    }
+
+    .footer .contents {
+        float: unset;
+        margin-bottom: 20px;
+    }
+
+    .footer .site_link {
+        float: unset;
+    }
+
+}
+
+@media(max-width:1000px) {}
+
+@media(max-width:880px) {
+    .mainBox .mainText {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding-top: 4em;
+        font-size: 4.5em;
+    }
+
+    .mainBox .mainSubText {
+        top: unset;
+        right: unset;
+        bottom: 200px;
+        transform: unset;
+        font-size: 1.8em;
+    }
+
+    .mainBox .mainBoxText {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding-top: 16vh;
+        font-size: 1.4em;
+        margin-left: 5%;
+    }
+
+    .mainBox .mainBoxText .engText {
+        font-size: 2em;
+    }
+
+    .mainBox .mainBoxSubText {
+        top: unset;
+        right: unset;
+        transform: unset;
+        font-size: 1em;
+        position: unset;
+        display: inline-block;
+        padding-top: 18vh;
+        letter-spacing: 0;
+    }
+
+    .mainBox .mainBoxText .block {
+        margin-left: -5%;
+    }
+
+    .copyright {
+        left: 10%;
+    }
+
+    .credit {
+        left: 10%;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .mainBox .mainSubText span.prox {
+        float: left;
+    }
+
+    .mainBox .mainText {
+        padding-top: 27vh;
+    }
+
+    .mainBox .mainSubText {
+        bottom: 24vh;
+        font-size: 1.4em;
+    }
+
+    .mainBox .mainSubText .spacebar {
+        width: 50px;
+    }
+
+    .mainBox5_modal {
+        display: none;
+    }
+
+    .mainBox6_modal {
+        display: block;
+    }
+
+    .mainBox_01 {
+        background: url(../../imgs/main/m_main_01.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    .mainBox_02 {
+        background: url(../../imgs/main/m_main_02.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    .mainBox_03 {
+        background: url(../../imgs/main/m_main_03.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    .mainBox_04 {
+        background: url(../../imgs/main/m_main_04.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    .mainBox_05 {
+        background: url(../../imgs/main/m_main_05.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    .mainBox .mainBoxText .engText::before {
+        left: -20px;
+    }
+
+    .mainBox .mainBoxText .engText::after {
+        right: -20px;
+    }
+
+    .scrollDown {
+        width: 82px;
+        height: 37px;
+    }
+
+    .serviceSlot {
+        width: 200px;
+        height: 60px;
+        transform: translate(-67%, 210%);
+
+    }
+
+    .copyright {
+        transform: rotate(-90deg);
+        left: unset;
+        right: -5%;
+        bottom: 75px;
+    }
+
+    .credit {
+        transform: rotate(-90deg);
+        left: auto;
+/**        right: -11%; /**/
+        right: -80px;
+        bottom: 180px;
+        width: 250px;
+    }
+
+    .mainBox .videoBox {
+        z-index: 0;
+        background: #000;
+    }
+
+
+}

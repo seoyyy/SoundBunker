@@ -1,0 +1,244 @@
+.modal {
+  display: grid;
+  z-index: 1;
+  left: 25%;
+  top: 11%;
+  width: 28%;
+  height: 45%;
+  overflow: auto;
+  position: absolute;
+  z-index: 100;
+  font-size: 150%;
+  font-size: 13vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 카테고리모드에서 아이콘 클릭시 나오는 알림창 */
+div#alert {
+  position: relative;
+  left: -51.5%;
+  width: 15%;
+  height: 83%;
+  top: 118%;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+}
+/* 알림창 페이드인 */
+#alert.effect {
+  position: relative;
+  left: -51%;
+  width: 15%;
+  height: 83%;
+  top: 118%;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  display: block;
+}
+/* 알림창 페이드인 이벤트2 (위치 다름) */
+#alert.effect2 {
+  position: relative;
+  left: -51%;
+  width: 15%;
+  height: 83%;
+  top: 130%;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+  animation-delay: 10s;
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  display: block;
+}
+/* 시리 클릭했을 때 나오는 알림 멘트 */
+#siri_ment1.effect {
+  position: relative;
+  left: -51%;
+  width: 15%;
+  height: 83%;
+  top: 130%;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+  animation-delay: 10s;
+  animation: fadein 10s;
+  -webkit-animation: fadein 10s;
+  display: block;
+}
+/* 시리 질문중 첫째 줄 */
+#question_1 {
+  width: 29.4em;
+  font-family: "Courier";
+  font-size: 14px;
+  top: 7%;
+  left: -36%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  /*-moz-animation: fadein 3s;*/ /* Firefox */
+/*-webkit-animation: fadein 3s; /* Safari and Chrome */
+/*-o-animation: fadein 3s; /* Opera */
+}
+/* 시리 질문중 둘째 줄 */
+#question_2 {
+  width: 29.4em;
+  font-family: "Courier";
+  font-size: 14px;
+  top: 15%;
+  left: -37%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  /*-moz-animation: fadein 3s;*/ /* Firefox */
+/*-webkit-animation: fadein 3s; /* Safari and Chrome */
+/*-o-animation: fadein 3s; /* Opera */
+}
+/* 예 */
+#yes {
+  width: 4.4em;
+  font-family: "Courier";
+  font-size: 14px;
+  top: 41%;
+  left: 48%;
+  color: white;
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 100;
+  /* -moz-animation: fadein 3s; */
+}
+/* 아니오 */
+#no {
+  width: 4.4em;
+  font-family: "Courier";
+  font-size: 14px;
+  top: 41%;
+  left: 82%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  /* -moz-animation: fadein 3s; */
+}
+/* 이런 노래는 어떠신가요? */
+#playing {
+  width: 19.4em;
+  font-family: Courier;
+  top: -45%;
+  left: 32%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* 페이드인 효과 정의 */
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+  @-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+  @-o-keyframes fadein { /* Opera */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+#siri_section {
+  font-size: 13vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+/* 저를 클릭해 주세요! */
+#siri_ment1 {
+  position: relative;
+  top: 60%;
+  left: 28.5%;
+  color: white;
+  /* width: 42%; */
+  font-size: 30px;
+  /* -moz-animation: fadein 3s; */
+}
+#recursionPuzzleModal .modal-content {
+  background-color: #0c4383f2;
+  width: 50%;
+  height: 22%;
+  box-shadow: 0px 0px 30px 10px #0c4383f2;
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: var(--white);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+  z-index: 100;
+  position: relative;
+}
+#yes:hover,
+#yes:focus {
+  color: var(--darkest-blue-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+#no:hover,
+#no:focus {
+  color: var(--darkest-blue-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* End  Ryan Saunders - Pipe Puzzle  */
+/* Antoine Guillien - Recursion Puzzle   */
+#recursion-puzzle-container .won {
+  padding: -3px;
+  margin-top: 10%;
+}
+#recursion-puzzle-container p {
+  font-weight: normal;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 1rem 0px 3.5rem;
+  color: rgb(254, 254, 254);
+  font-family: "Cutive Mono", monospace;
+  overflow: hidden;
+}
+#recursion-puzzle-container .won {
+  padding: 1rem;
+}

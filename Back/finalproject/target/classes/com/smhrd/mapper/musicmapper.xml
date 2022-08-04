@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.musicmapper">
+    
+    
+    <select id="randRMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'r' order by rand() limit 5
+    </select>
+    <select id="randSMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 's' order by rand() limit 5
+    </select>
+    <select id="randWMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'w' order by rand() limit 5
+    </select>
+    <select id="randEMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'e' order by rand() limit 5
+    </select>
+    <select id="randHMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'h' order by rand() limit 5 
+    </select>
+
+ 
+	
+    
+</mapper> 

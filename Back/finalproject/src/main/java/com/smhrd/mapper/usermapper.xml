@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.smhrd.mapper.usermapper">
+      
+      
+  <insert id="userInsert" parameterType="com.smhrd.domain.User">
+      insert into user  (user_id,user_pw,user_nick,user_email,user_type)
+      calues(#{user_id}, #{user_pw}, #{user_nick}, #{user_email},'c')
+  </insert>
+  <select id="userContent" resultType="com.smhrd.domain.User">
+      select * from user where user_id=#{user_id} 
+  </select>   
+  <delete id="userDelete" parameterType="String">
+      delete from user where user_id=#{user_id}
+  </delete>   
+  <update id="userUpdate" parameterType="com.smhrd.domain.User">
+      update board set user_pw = #{user_pw}, user_nick = #{user_nick}, user_email = #{user_email} where user_id=#{user_id}
+  </update>
+  <select id="userList" resultType="com.smhrd.domain.User">
+      select * from user
+  </select>   
+  </mapper>
+      
+      
+      
+      
+      
+      
+      
+      
+      
