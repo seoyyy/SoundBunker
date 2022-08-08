@@ -3,7 +3,7 @@
 ![image]()
 
 ## 1. 프로젝트명
-* 행동 및 사물 감지를 통한 음악 추천 및 스트리밍 서비스
+* 움직임과 사물 감지를 통한 상황 맞춤 음악 스트리밍 서비스
 * 서비스설명: 
 
 ## 2. 주요기능
@@ -62,7 +62,7 @@
 ![image](https://user-images.githubusercontent.com/104408835/170643486-7fbd60cb-f5ba-4b66-b81a-3ae0f9b29904.png)
 
 ## 8 팀원 단위 업무 분장 및 결과표
-![image](https://user-images.githubusercontent.com/104408835/170645342-2de2d43b-6585-48ac-b374-f77bdfa035e2.png)
+![image](팀원소개.png)
 
 ## 9 트러블슈팅
 
