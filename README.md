@@ -37,26 +37,14 @@
 
 ## 6 SW 동작 화면
 
-### 메인페이지/로그인/회원가입
-![image](https://user-images.githubusercontent.com/104408835/170654096-26729d9f-a49a-444e-93f5-967eee135251.png)
+### 메인페이지
+![image](.png)
 
-### 지도기능
-![image](https://user-images.githubusercontent.com/104408835/170654122-5fc6f0b1-5f00-4834-9fcc-9701f3773b5a.png)
+### 캠모드
+![image](.png)
 
-### 게시글목록
-![image](https://user-images.githubusercontent.com/104408835/170654182-e6cbb12d-5647-406c-a6c4-7e417bc2bb3c.png)
-
-### 게시글 작성 및 댓글작성
-![image](https://user-images.githubusercontent.com/104408835/170654189-3cd42664-e765-4093-8748-5f482fcd0a2a.png)
-
-### 채팅 및 안심등록
-![image](https://user-images.githubusercontent.com/104408835/170653534-56dc650d-1373-4255-93ec-97f90f38b4ad.png)
-
-### 약속 알림 타이머기능
-![image](https://user-images.githubusercontent.com/104408835/170653540-5b5b58ae-b75d-47ea-b429-84b709131039.png)
-
-### 후기 및 매너등급
-![image](https://user-images.githubusercontent.com/104408835/170654193-e084bd17-6ad1-4932-a912-fd632b6ba879.png)
+### 카테고리모드
+![image](.png)
 
 ## 7 제작 일정
 ![image](일정.png)
