@@ -55,7 +55,12 @@
 ## 9 트러블슈팅
 
 * 문제1<br>
-
+### python에서 ajax로 결과값을 받아온 후 다른 JS 파일에 결과값 전송이슈
+* 파이썬 플라스크 서버에서 모션인식 및 사물인식에서 나온 결과값을 Ajax로 받았지만
+Ajax 를 사용했던 js 파일에서 다른 js 파일로 결과값을 보내는데 이슈가 생겼다. 
+구글검색 및 책으로 이슈를 해결 할 수 있었다. 
+그방법은 결과 값을 받은 ajax 안에 sessionStorage(localStorage).setItem('키', '값'));
+을 사용하여 다른 js 파일에서 sessionStorage(localStorage).getItem('키', '값')); 으로 결과값을 받아올 수 있게 되었다.
  
 * 문제2<br>
 
