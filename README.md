@@ -41,10 +41,10 @@
 ![image](.png)
 
 ### 캠모드
-![image](.png)
+![image](캠모드화면단.png)
 
 ### 카테고리모드
-![image](.png)
+![image](카테고리모드화면단.png)
 
 ## 7 제작 일정
 ![image](일정.png)
