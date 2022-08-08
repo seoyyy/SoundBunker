@@ -23,7 +23,7 @@
 |데이터베이스| MySQL / etc..|
 
 ## 4. 아키텍처(구조)
-![서비스 아키텍처]()
+![서비스 아키텍처](아키텍쳐.png)
 
 
 ## 5. 기능 흐름도
@@ -59,7 +59,7 @@
 ![image](https://user-images.githubusercontent.com/104408835/170654193-e084bd17-6ad1-4932-a912-fd632b6ba879.png)
 
 ## 7 제작 일정
-![image](https://user-images.githubusercontent.com/104408835/170643486-7fbd60cb-f5ba-4b66-b81a-3ae0f9b29904.png)
+![image](일정.png)
 
 ## 8 팀원 단위 업무 분장 및 결과표
 ![image](팀원소개.png)
